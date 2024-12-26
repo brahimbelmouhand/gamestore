@@ -1,0 +1,38 @@
+{
+    "header": {
+        "home": "Home",
+        "news": "News",
+        "store": "Store",
+        "purchase_history": "Purchase History",
+        "languages": "Languages",
+        "login": "Log In",
+        "logout": "Log Out"
+    },
+    "home": {
+        "title": "Home"
+    },
+    "news": {
+        "title": "News"
+    },
+    "store": {
+        "title": "Store"
+    },
+    "purchase_history": {
+        "title": "Purchase History"
+    },
+    "languages": {
+        "english": "English",
+        "dutch": "Dutch",
+        "german": "German",
+        "french": "French",
+        "japanese": "Japanese"
+    },
+    "login": {
+        "username": "Username",
+        "password": "Password"
+    },
+    "logout": {},
+    "register": {
+        "title": "Register"
+    }
+}

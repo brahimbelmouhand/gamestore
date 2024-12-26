@@ -1,0 +1,39 @@
+{
+    "header": {
+        "home": "Inicio",
+        "news": "Noticias",
+        "store": "Tienda",
+        "purchase_history": "Historial de Compras",
+        "languages": "Idiomas",
+        "login": "Iniciar sesión",
+        "logout": "Cerrar sesión"
+    },
+    "home": {
+        "title": "Inicio"
+    },
+    "news": {
+        "title": "Noticias"
+    },
+    "store": {
+        "title": "Tienda"
+    },
+    "purchase_history": {
+        "title": "Historial de Compras"
+    },
+    "languages": {
+        "english": "Inglés",
+        "dutch": "Holandés",
+        "german": "Alemán",
+        "french": "Francés",
+        "japanese": "Japonés"
+    },
+    "login": {
+        "title": "Iniciar sesión",
+        "username": "Nombre de usuario",
+        "password": "Contraseña"
+    },
+    "logout": {},
+    "register": {
+        "title": "Registrar"
+    }
+}

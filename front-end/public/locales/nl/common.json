@@ -1,0 +1,39 @@
+{
+    "header": {
+        "home": "Home",
+        "news": "Nieuws",
+        "store": "Winkel",
+        "purchase_history": "Aankoopgeschiedenis",
+        "languages": "Talen",
+        "login": "Aanmelden",
+        "logout": "Afmelden"
+    },
+    "home": {
+        "title": "Home"
+    },
+    "news": {
+        "title": "Nieuws"
+    },
+    "store": {
+        "title": "Winkel"
+    },
+    "purchase_history": {
+        "title": "Aankoopgeschiedenis"
+    },
+    "languages": {
+        "english": "Engels",
+        "dutch": "Nederlands",
+        "german": "Duits",
+        "french": "Frans",
+        "japanese": "Japans"
+    },
+    "login": {
+        "title": "Aanmelden",
+        "username": "Gebruikersnaam",
+        "password": "Wachtwoord"
+    },
+    "logout": {},
+    "register": {
+        "title": "Registreren"
+    }
+}

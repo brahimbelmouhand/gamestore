@@ -1,0 +1,9 @@
+# Normalize text files
+* text=auto
+
+# Prevent changes to binary files
+*.jpg binary
+*.png binary
+
+# Exclude node_modules
+node_modules/**/* -text
