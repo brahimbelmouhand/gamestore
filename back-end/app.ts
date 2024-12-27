@@ -1,4 +1,4 @@
-import express, { Request, Response, NextFunction } from 'express';
+import express, { NextFunction, Request, Response } from 'express';
 import * as dotenv from 'dotenv';
 import cors from 'cors';
 import 'swagger-jsdoc';
@@ -12,7 +12,7 @@ import bodyParser from 'body-parser';
 
 const app = express();
 dotenv.config();
-const port = process.env.APP_PORT || 8080
+const port = process.env.APP_PORT || 8081
 
 app.use(cors({ origin: 'http://localhost:3000' }));
 app.use(bodyParser.json());
@@ -22,7 +22,7 @@ app.use(
         secret: process.env.JWT_SECRET || 'default_secret',
         algorithms: ['HS256'],
     }).unless({
-        path: ['/api-docs', /^\/api-docs\/.*/, '/users/login', '/users/signup', '/status'],
+        path: ['/api-docs', /^\/api-docs\/.*/, '/users/login', '/users/register', '/status'],
     })
 );
 
@@ -59,5 +59,5 @@ app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
 });
 
 app.listen(port || 3000, () => {
-    console.log(`Courses API is running on port ${port}.`);
+    console.log(`GameWebsite API is running on port ${port}.`);
 });
