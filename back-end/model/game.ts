@@ -5,6 +5,8 @@ class Game {
     private genres: string[];
 
     constructor(game: { id?: number, name: string, price: number, genres: string[] }) {
+        this.validate(game);
+
         this.id = game.id;
         this.name = game.name;
         this.price = game.price;
