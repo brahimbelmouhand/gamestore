@@ -13,6 +13,10 @@ class Game {
         this.genres = game.genres;
     }
 
+    getId(): number | undefined {
+        return this.id;
+    }
+
     getName(): string {
         return this.name;
     }

@@ -6,6 +6,8 @@ class Purchase {
     private game: Game;
 
     constructor(purchase: { id?: number, date: Date, game: Game }) {
+        this.validate(purchase);
+
         this.id = purchase.id;
         this.date = purchase.date;
         this.game = purchase.game;
@@ -21,6 +23,15 @@ class Purchase {
 
     getGame(): Game {
         return this.game;
+    }
+
+    validate(purchase: { date: Date, game: Game }) {
+        if (!purchase.date) {
+            throw new Error("Date is required!");
+        }
+        if (!purchase.game) {
+            throw new Error("Game is required!");
+        }
     }
 
 }
