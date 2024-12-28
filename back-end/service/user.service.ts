@@ -28,17 +28,17 @@ const createUser = async ({ firstName, lastName, birthDate, email, username, pas
 
 };
 
-const authenticate = async ({ username, password, admin }: { username: string, password: string, admin: boolean }): Promise<AuthenticationResponse> => {
+const authenticate = async ({ username, password }: { username: string, password: string }): Promise<AuthenticationResponse> => {
     const client = await getUserByUsername({ username });
     const isValidPassword = bcrypt.compare(password, client.getPassword());
     if (!isValidPassword) {
         throw new Error("Password is invalid");
     }
-    const token = generateJWTtoken({ username, admin });
+    const token = generateJWTtoken({ username: client.getUsername(), admin: client.getAdmin() });
     return {
         token: token,
         username: username,
-        admin: admin
+        admin: client.getAdmin()
     }
 }
 

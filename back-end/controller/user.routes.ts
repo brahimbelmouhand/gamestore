@@ -15,4 +15,15 @@ userRouter.post('/register', async (req: Request, res: Response, next: NextFunct
     }
 });
 
+userRouter.post('/login', async (req: Request, res: Response, next: NextFunction) => {
+    try {
+        const newUserInput = <UserInput>req.body;
+        const response = await userService.authenticate({ username: newUserInput.username, password: newUserInput.password });
+        res.status(200).json({ message: 'Authentication successful', ...response });
+    }
+    catch (error) {
+        next(error);
+    }
+})
+
 export default userRouter;
