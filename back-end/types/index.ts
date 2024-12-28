@@ -13,15 +13,22 @@ type UserInput = {
 
 type ClientInput = {
     id?: number,
-    user?: UserInput
+    user: UserInput
 };
 
 type AdminInput = {
     id?: number,
-    user?: UserInput
+    user: UserInput
 };
+
+type AuthenticationResponse = {
+    token: string,
+    username: string,
+    admin: boolean
+}
 
 export { Role };
 export { UserInput };
 export { AdminInput };
 export { ClientInput };
+export { AuthenticationResponse };

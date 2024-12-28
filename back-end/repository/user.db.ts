@@ -1,13 +1,26 @@
 import database from './database';
 import User from '../model/user';
+import { UserInput } from '../types';
 
-const getUserByUsername = async ({ username }: { username: string }) => {
+const getAllUsers = async (): Promise<User[]> => {
+    try {
+        const usersPrisma = await database.user.findMany();
+        return usersPrisma.map((userPrisma) => User.from(userPrisma));
+    }
+    catch (error) {
+        console.error(error);
+        throw new Error("Database error. See server log for details.");
+    }
+}
+
+
+const getUserByUsername = async ({ username }: { username: string }): Promise<User | null> => {
     try {
         const userPrisma = await database.user.findUnique({
             where: { username }
         });
 
-        return userPrisma ? User.from(userPrisma) : null
+        return userPrisma ? User.from(userPrisma) : null;
     }
     catch (error) {
         console.error(error);
@@ -37,6 +50,7 @@ const createUser = async (user: User): Promise<User> => {
 }
 
 const userDb = {
+    getAllUsers,
     getUserByUsername,
     createUser
 }

@@ -1,10 +1,16 @@
-import { UserInput } from "../types";
+import { AuthenticationResponse, UserInput } from "../types";
 import User from "../model/user";
 import userDb from "../repository/user.db"
 import bcrypt from 'bcrypt';
+import { generateJWTtoken } from "../util/jwt";
 
-const getUserByUsername = async ({ username }: { username: string }) => {
+const getAllUsers = async (): Promise<User[]> => userDb.getAllUsers();
+
+const getUserByUsername = async ({ username }: { username: string }): Promise<User> => {
     const foundUser = await userDb.getUserByUsername({ username });
+    if (!foundUser) {
+        throw new Error(`User with username ${username} doesn't exist.`);
+    }
     return foundUser;
 };
 
@@ -22,10 +28,24 @@ const createUser = async ({ firstName, lastName, birthDate, email, username, pas
 
 };
 
+const authenticate = async ({ username, password, admin }: { username: string, password: string, admin: boolean }): Promise<AuthenticationResponse> => {
+    const client = await getUserByUsername({ username });
+    const isValidPassword = bcrypt.compare(password, client.getPassword());
+    if (!isValidPassword) {
+        throw new Error("Password is invalid");
+    }
+    const token = generateJWTtoken({ username, admin });
+    return {
+        token: token,
+        username: username,
+        admin: admin
+    }
+}
 
 const userService = {
     getUserByUsername,
-    createUser
+    createUser,
+    authenticate
 };
 
 export default userService;
