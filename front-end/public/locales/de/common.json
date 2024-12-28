@@ -34,6 +34,12 @@
     },
     "logout": {},
     "register": {
-        "title": "Registrieren"
+        "title": "Registrieren",
+        "firstName": "Vorname",
+        "lastName": "Nachname",
+        "birthDate": "Geburtsdatum",
+        "email": "E-mail",
+        "username": "Benutzername",
+        "password": "Passwort"
     }
 }

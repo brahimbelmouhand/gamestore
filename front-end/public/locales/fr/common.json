@@ -29,11 +29,18 @@
     },
     "login": {
         "title": "Se Connecter",
-        "username": "Nom d'utilisation",
+        "username": "Nom d'utilisateur",
         "password": "Mot de passe"
     },
     "logoout": {},
     "register": {
-        "title": "Registrer"
+        "title": "Registrer",
+        "firstName": "Prénom",
+        "lastName": "Nom",
+        "birthDate": "Date de naissance",
+        "email": "E-mail",
+        "username": "Nom d'utilisateur",
+        "password": "Mot de passe",
+        "confirm_password": "Confirme ton mot de passe"
     }
 }

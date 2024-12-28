@@ -34,6 +34,13 @@
     },
     "logout": {},
     "register": {
-        "title": "Registrar"
+        "title": "Registrar",
+        "firstName": "Nombre de pila",
+        "lastName": "Apellido",
+        "birthDate": "Fecha de nacimiento",
+        "email": "E-mail",
+        "username": "Nombre de usuario",
+        "password": "Contraseña",
+        "confirm_password": "Confirm your password"
     }
 }

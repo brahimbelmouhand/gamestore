@@ -33,6 +33,13 @@
     },
     "logout": {},
     "register": {
-        "title": "Register"
+        "title": "Register",
+        "firstName": "First name",
+        "lastName": "Last name",
+        "birthDate": "Birth date",
+        "email": "E-mail",
+        "username": "Username",
+        "password": "Password",
+        "confirm_password": "Confirm your password"
     }
 }

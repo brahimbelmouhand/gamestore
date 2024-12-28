@@ -34,6 +34,13 @@
     },
     "logout": {},
     "register": {
-        "title": "Registreren"
+        "title": "Registreren",
+        "firstName": "Voornaam",
+        "lastName": "Achternaam",
+        "birthDate": "Geboortedatum",
+        "email": "E-mail",
+        "username": "Gebruikersnaam",
+        "password": "Wachtwoord",
+        "confirm_password": "Bevestig je wachtwoord"
     }
 }

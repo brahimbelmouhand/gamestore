@@ -1,18 +1,58 @@
+import UserService from "@/services/UserService";
 import { GetServerSideProps } from "next";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { useState } from "react";
 
 const Register: React.FC = () => {
-    const { t } = useTranslation();
-    const handleSubmit = () => {
+    const { t, i18n } = useTranslation();
+    const router = useRouter();
+    const [userInfo, setUserInfo] = useState<User>({
+        firstName: "",
+        lastName: "",
+        birthDate: new Date(""),
+        email: "",
+        username: "",
+        password: ""
+    });
 
+    const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
+        try {
+            const response = await UserService.registerUser(userInfo);
+            if (response) {
+                router.push("/login");
+            } else {
+                console.error("Registration failed: ", response.message);
+            }
+        } catch (error) {
+            console.error("Submit doesn't work: ", error);
+        }
     }
-    {/*onSubmit={handleSubmit}>*/ }
+
+    const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        try {
+            const { name, value } = event.target;
+
+            if (name === "birthDate") {
+                const parsedDate = new Date(value);
+                setUserInfo((prevUserInfo) => ({ ...prevUserInfo, [name]: parsedDate }));
+            }
+            else {
+                setUserInfo((prevUserInfo) => ({ ...prevUserInfo, [name]: value }));
+            }
+            console.log(userInfo)
+        } catch (error) {
+            console.log("handlechange doesn't work: ", error);
+        }
+    }
+
     return (
         <>
-            <main className="mx-2 my-6">
-                <article className="flex flex-col border border-gray-300 shadow-lg rounded-lg p-8 bg-white w-full">
+            <main className="min-h-screen flex items-center justify-center">
+                <article className="flex flex-col border border-gray-300 shadow-lg rounded-lg p-10 bg-white">
                     <section id="title" className="mb-4">
                         <h1 className="text-2xl text-center font-bold text-gray-800">
                             {t("register.title")}
@@ -20,15 +60,94 @@ const Register: React.FC = () => {
                     </section>
                     <hr className="border-gray-300 my-4" />
                     <section>
-                        <p className="text-gray-600">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dignissim arcu mauris, eu posuere mi commodo nec. Vestibulum feugiat felis ut felis elementum, ut bibendum odio finibus. Donec dolor augue, dignissim vitae enim sit amet, dignissim bibendum massa. Mauris elit purus, hendrerit vitae cursus id, porttitor id ante. Quisque eget eros sit amet ex bibendum vulputate. Aliquam nec tortor vitae nibh pharetra posuere. Praesent tempor pretium turpis, ac convallis ex malesuada vitae. Praesent accumsan convallis efficitur.
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dignissim arcu mauris, eu posuere mi commodo nec. Vestibulum feugiat felis ut felis elementum, ut bibendum odio finibus. Donec dolor augue, dignissim vitae enim sit amet, dignissim bibendum massa. Mauris elit purus, hendrerit vitae cursus id, porttitor id ante. Quisque eget eros sit amet ex bibendum vulputate. Aliquam nec tortor vitae nibh pharetra posuere. Praesent tempor pretium turpis, ac convallis ex malesuada vitae. Praesent accumsan convallis efficitur.
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dignissim arcu mauris, eu posuere mi commodo nec. Vestibulum feugiat felis ut felis elementum, ut bibendum odio finibus. Donec dolor augue, dignissim vitae enim sit amet, dignissim bibendum massa. Mauris elit purus, hendrerit vitae cursus id, porttitor id ante. Quisque eget eros sit amet ex bibendum vulputate. Aliquam nec tortor vitae nibh pharetra posuere. Praesent tempor pretium turpis, ac convallis ex malesuada vitae. Praesent accumsan convallis efficitur.
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dignissim arcu mauris, eu posuere mi commodo nec. Vestibulum feugiat felis ut felis elementum, ut bibendum odio finibus. Donec dolor augue, dignissim vitae enim sit amet, dignissim bibendum massa. Mauris elit purus, hendrerit vitae cursus id, porttitor id ante. Quisque eget eros sit amet ex bibendum vulputate. Aliquam nec tortor vitae nibh pharetra posuere. Praesent tempor pretium turpis, ac convallis ex malesuada vitae. Praesent accumsan convallis efficitur.
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dignissim arcu mauris, eu posuere mi commodo nec. Vestibulum feugiat felis ut felis elementum, ut bibendum odio finibus. Donec dolor augue, dignissim vitae enim sit amet, dignissim bibendum massa. Mauris elit purus, hendrerit vitae cursus id, porttitor id ante. Quisque eget eros sit amet ex bibendum vulputate. Aliquam nec tortor vitae nibh pharetra posuere. Praesent tempor pretium turpis, ac convallis ex malesuada vitae. Praesent accumsan convallis efficitur.
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dignissim arcu mauris, eu posuere mi commodo nec. Vestibulum feugiat felis ut felis elementum, ut bibendum odio finibus. Donec dolor augue, dignissim vitae enim sit amet, dignissim bibendum massa. Mauris elit purus, hendrerit vitae cursus id, porttitor id ante. Quisque eget eros sit amet ex bibendum vulputate. Aliquam nec tortor vitae nibh pharetra posuere. Praesent tempor pretium turpis, ac convallis ex malesuada vitae. Praesent accumsan convallis efficitur.
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dignissim arcu mauris, eu posuere mi commodo nec. Vestibulum feugiat felis ut felis elementum, ut bibendum odio finibus. Donec dolor augue, dignissim vitae enim sit amet, dignissim bibendum massa. Mauris elit purus, hendrerit vitae cursus id, porttitor id ante. Quisque eget eros sit amet ex bibendum vulputate. Aliquam nec tortor vitae nibh pharetra posuere. Praesent tempor pretium turpis, ac convallis ex malesuada vitae. Praesent accumsan convallis efficitur.
-                        </p>
+                        <form className='flex flex-col' onSubmit={handleSubmit}>
+                            <div className="flex flex-row">
+                                <div className='flex flex-col mb-6 mx-3'>
+                                    <label className='font-semibold font-sans mx-2 mt-2'>{t("register.firstName")}:</label>
+                                    <input className='border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500'
+                                        type='text'
+                                        placeholder={t("register.firstName")}
+                                        name="firstName"
+                                        onChange={handleChange}
+                                        value={userInfo.firstName}
+                                        required
+                                    />
+                                </div>
+                                <div className='flex flex-col mb-6 mx-3'>
+                                    <label className='font-semibold font-sans mx-2 mt-2'>{t("register.lastName")}:</label>
+                                    <input className='border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500'
+                                        type="text"
+                                        placeholder={t("register.lastName")}
+                                        name="lastName"
+                                        onChange={handleChange}
+                                        value={userInfo.lastName}
+                                        required
+                                    />
+                                </div>
+                            </div>
+                            <div className='flex flex-col mb-6 mx-3'>
+                                <label className='font-semibold font-sans mx-2 mt-2'>{t("register.email")}:</label>
+                                <input className='border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500'
+                                    type="text"
+                                    placeholder={t("register.email")}
+                                    name="email"
+                                    onChange={handleChange}
+                                    value={userInfo.email}
+                                    required
+                                />
+                            </div>
+                            <div className="flex flex-row">
+                                <div className='flex flex-col mb-6 mx-3'>
+                                    <label className='font-semibold font-sans mx-2 mt-2'>{t("register.birthDate")}:</label>
+                                    <input className='border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500'
+                                        type='date'
+                                        placeholder={t("register.birthDate")}
+                                        name="birthDate"
+                                        onChange={handleChange}
+                                        lang={i18n.language}
+                                        required
+                                    />
+                                </div>
+                                <div className='flex flex-col mb-6 mx-3'>
+                                    <label className='font-semibold font-sans mx-2 mt-2'>{t("register.username")}:</label>
+                                    <input className='border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500'
+                                        type='text'
+                                        placeholder={t("register.username")}
+                                        name="username"
+                                        onChange={handleChange}
+                                        value={userInfo.username}
+                                        required
+                                    />
+                                </div>
+                            </div>
+                            <div className="flex flex-col">
+                                <div className='flex flex-col mb-6 mx-3'>
+                                    <label className='font-semibold font-sans mx-2 mt-2'>{t("register.password")}:</label>
+                                    <input className='border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500'
+                                        type='password'
+                                        placeholder={t("register.password")}
+                                        name="password"
+                                        onChange={handleChange}
+                                        required
+                                    />
+                                </div>
+                                <div className='flex flex-col mb-6 mx-3'>
+                                    <label className='font-semibold font-sans mx-2 mt-2'>{t("register.confirm_password")}:</label>
+                                    <input className='border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500'
+                                        type="password"
+                                        placeholder={t("register.confirm_password")}
+                                        required
+                                    />
+                                </div>
+                            </div>
+                            <input className='border-black text-white bg-blue-500 hover:bg-blue-600 disabled:bg-gray-300  rounded px-2 py-1 text-lg mb-6'
+                                type='submit'
+                                value={t("register.title")}
+                            />
+                            <span className='flex justify-center'>
+                                <Link href="/login" className='text-blue-400 hover:underline'>Already have an account? Log in!</Link>
+                            </span>
+                        </form>
                     </section>
                 </article>
             </main>
