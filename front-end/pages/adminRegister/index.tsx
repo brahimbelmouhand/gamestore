@@ -1,3 +1,4 @@
+import AdminService from "@/services/AdminService";
 import UserService from "@/services/UserService";
 import { GetServerSideProps } from "next";
 import { useTranslation } from "next-i18next";
@@ -6,24 +7,24 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState } from "react";
 
-const Register: React.FC = () => {
+const AdminRegister: React.FC = () => {
     const { t, i18n } = useTranslation();
-    const router = useRouter();
+    const [successMessage, setSuccessMessage] = useState<string | null>(null);
     const [userInfo, setUserInfo] = useState<User>({
         firstName: "",
         lastName: "",
         birthDate: new Date(""),
         email: "",
         username: "",
-        password: ""
+        password: "",
+        role: "admin"
     });
-
     const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         try {
-            const response = await UserService.registerUser(userInfo);
+            const response = await AdminService.registerAdmin(userInfo);
             if (response) {
-                router.push("/login");
+                setSuccessMessage("Created new administrator successfully.");
             } else {
                 console.error("Registration failed.");
             }
@@ -35,7 +36,7 @@ const Register: React.FC = () => {
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         try {
             const { name, value } = event.target;
-
+            setSuccessMessage(null);
             if (name === "birthDate") {
                 const parsedDate = new Date(value);
                 setUserInfo((prevUserInfo) => ({ ...prevUserInfo, [name]: parsedDate }));
@@ -55,7 +56,7 @@ const Register: React.FC = () => {
                 <article className="flex flex-col border border-gray-300 shadow-lg rounded-lg p-10 bg-white">
                     <section id="title" className="mb-4">
                         <h1 className="text-2xl text-center font-bold text-gray-800">
-                            {t("register.title")}
+                            {t("adminRegister.title")}
                         </h1>
                     </section>
                     <hr className="border-gray-300 my-4" />
@@ -131,22 +132,12 @@ const Register: React.FC = () => {
                                         required
                                     />
                                 </div>
-                                <div className='flex flex-col mb-6 mx-3'>
-                                    <label className='font-semibold font-sans mx-2 mt-2'>{t("register.confirm_password")}:</label>
-                                    <input className='border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500'
-                                        type="password"
-                                        placeholder={t("register.confirm_password")}
-                                        required
-                                    />
-                                </div>
                             </div>
                             <input className='border-black text-white bg-blue-500 hover:bg-blue-600 disabled:bg-gray-300  rounded px-2 py-1 text-lg mb-6'
                                 type='submit'
-                                value={t("register.title")}
+                                value={t("adminRegister.title")}
                             />
-                            <span className='flex justify-center'>
-                                <Link href="/login" className='text-blue-400 hover:underline'>{t("register.login")}</Link>
-                            </span>
+                            <p>{successMessage}</p>
                         </form>
                     </section>
                 </article>
@@ -154,8 +145,7 @@ const Register: React.FC = () => {
         </>
     );
 }
-
-export default Register;
+export default AdminRegister;
 export const getServerSideProps: GetServerSideProps = async (context) => {
     const { locale } = context;
 

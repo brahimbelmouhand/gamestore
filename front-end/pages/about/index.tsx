@@ -1,13 +1,18 @@
 import { GetServerSideProps } from "next";
+import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 const About: React.FC = () => {
+    const { t } = useTranslation();
+
     return (
         <>
             <main className="mx-2 my-6">
                 <article className="flex flex-col border border-gray-300 shadow-lg rounded-lg p-8 bg-white w-full">
                     <section id="title" className="mb-4">
-                        <h1 className="text-2xl text-center font-bold text-gray-800">Home</h1>
+                        <h1 className="text-2xl text-center font-bold text-gray-800">
+                            {t("about.title")}
+                        </h1>
                     </section>
                     <hr className="border-gray-300 my-4" />
                     <section>

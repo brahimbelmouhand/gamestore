@@ -1,45 +1,58 @@
 {
     "header": {
-        "home": "Home",
-        "news": "News",
-        "store": "Store",
-        "purchase_history": "Purchase History",
-        "languages": "Languages",
-        "login": "Log In",
-        "logout": "Log Out"
+        "home": "ホーム",
+        "news": "ニュース",
+        "store": "ストア",
+        "purchase_history": "購入履歴",
+        "languages": "言語",
+        "login": "ログイン",
+        "logout": "ログアウト",
+        "shoppingCart": "ショッピングカート"
     },
     "home": {
-        "title": "Home"
+        "title": "ホーム"
     },
     "news": {
-        "title": "News"
+        "title": "ニュース"
     },
     "store": {
-        "title": "Store"
+        "title": "ストア"
     },
     "purchase_history": {
-        "title": "Purchase History"
+        "title": "購入履歴"
     },
     "languages": {
-        "english": "English",
-        "dutch": "Dutch",
-        "german": "German",
-        "french": "French",
-        "japanese": "Japanese"
+        "english": "英語",
+        "dutch": "オランダ語",
+        "german": "ドイツ語",
+        "french": "フランス語",
+        "japanese": "日本語"
     },
     "login": {
-        "username": "Username",
-        "password": "Password"
+        "title": "ログイン",
+        "username": "ユーザー名",
+        "password": "パスワード",
+        "register": "アカウントをお持ちではありませんか？今すぐ登録！"
     },
     "logout": {},
     "register": {
-        "title": "Register",
-        "firstName": "First name",
-        "lastName": "Last name",
-        "birthDate": "Birth date",
-        "email": "E-mail",
-        "username": "Username",
-        "password": "Password",
-        "confirm_password": "Confirm your password"
+        "title": "登録",
+        "firstName": "名前",
+        "lastName": "苗字",
+        "birthDate": "生年月日",
+        "email": "Eメール",
+        "username": "ユーザー名",
+        "password": "パスワード",
+        "confirm_password": "パスワードを確認",
+        "login": "すでにアカウントをお持ちですか？ログイン！"
+    },
+    "about": {
+        "title": "概要"
+    },
+    "contact": {
+        "title": "お問い合わせ"
+    },
+    "shoppingCart": {
+        "title": "私のショッピングカート"
     }
 }

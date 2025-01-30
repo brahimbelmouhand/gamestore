@@ -1,11 +1,8 @@
+import { useTranslation } from "next-i18next";
 import Link from "next/link";
-import { useEffect, useState } from "react";
 
-const Footer: React.FC = () => {
-    const [isAuthenticated, setAuthenticated] = useState<boolean>(false);
-    useEffect(() => {
-        sessionStorage.getItem("loggedInUser");
-    }, []);
+const Footer: React.FC<{ loggedInUser: User | null }> = ({ loggedInUser }) => {
+    const { t } = useTranslation();
 
     return (
         <>
@@ -13,18 +10,17 @@ const Footer: React.FC = () => {
                 <div className="flex items-center justify-evenly text-white font-semibold mt-2">
                     <div className="flex flex-col">
                         <h2>Links:</h2>
-                        <Link href="/">Home</Link>
-                        <Link href="/news">News</Link>
-                        <Link href="/store">Store</Link>
-                        {isAuthenticated &&
-                            <Link href="/purchaseHistory">Purchase History</Link>
+                        <Link href="/" className="hover:underline">{t("home.title")}</Link>
+                        <Link href="/news" className="hover:underline">{t("news.title")}</Link>
+                        <Link href="/store" className="hover:underline">{t("store.title")}</Link>
+                        {loggedInUser &&
+                            <Link href="/purchaseHistory">{t("purchase_history.title")}</Link>
                         }
                     </div>
                     <div className="flex flex-col">
                         <h2>Extra Links:</h2>
-                        <Link href="/about">About</Link>
-                        <Link href="/contact">Contact</Link>
-                        <Link href="/store">Store</Link>
+                        <Link href="/about" className="hover:underline">{t("about.title")}</Link>
+                        <Link href="/contact" className="hover:underline">{t("contact.title")}</Link>
                     </div>
                 </div>
             </footer>

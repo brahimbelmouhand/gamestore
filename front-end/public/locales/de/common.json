@@ -6,7 +6,8 @@
         "purchase_history": "Kaufhistorie",
         "languages": "Sprachen",
         "login": "Einloggen",
-        "logout": "Aufloggen"
+        "logout": "Aufloggen",
+        "shoppingCart": "Warenkorb"
     },
     "home": {
         "title": "Startseite"
@@ -30,9 +31,9 @@
     "login": {
         "title": "Einloggen",
         "username": "Benutzername",
-        "password": "Passwort"
+        "password": "Passwort",
+        "register": "No account? Register now!"
     },
-    "logout": {},
     "register": {
         "title": "Registrieren",
         "firstName": "Vorname",
@@ -40,6 +41,16 @@
         "birthDate": "Geburtsdatum",
         "email": "E-mail",
         "username": "Benutzername",
-        "password": "Passwort"
+        "password": "Passwort",
+        "login": "Sie haben bereits ein Konto? Einloggen!"
+    },
+    "about": {
+        "title": "Über"
+    },
+    "contact": {
+        "title": "Kontakt"
+    },
+    "shoppingCart": {
+        "title": "Mein Warenkorb"
     }
 }

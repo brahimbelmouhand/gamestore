@@ -1,17 +1,9 @@
 import Link from "next/link";
-import { useEffect, useState } from "react";
 import LanguageDropDown from "./ui/LanguageDropDown";
 import { useTranslation } from "next-i18next";
 
-const Header: React.FC = () => {
-    const [isAuthenticated, setAuthenticated] = useState<boolean>(false);
+const Header: React.FC<{ loggedInUser: User | null, handleLogout: () => void }> = ({ loggedInUser, handleLogout }) => {
     const { t } = useTranslation();
-
-    useEffect(() => {
-        if (sessionStorage.getItem("loggedInUser")) {
-            setAuthenticated(true)
-        }
-    }, []);
 
     return (
         <>
@@ -27,19 +19,29 @@ const Header: React.FC = () => {
                     <Link href="/store" className="hover:text-gray-300 hover:bg-gray-700 p-4 rounded">
                         {t("header.store")}
                     </Link>
-                    {isAuthenticated &&
-                        <Link href='/purchase-history' className="hover:text-gray-300 hover:bg-gray-700 p-4 rounded">
+                    {loggedInUser && loggedInUser.role === "client" &&
+                        <Link href='/purchaseHistory' className="hover:text-gray-300 hover:bg-gray-700 p-4 rounded">
                             {t("header.purchase_history")}
                         </Link>
                     }
+                    {loggedInUser && loggedInUser.role === "client" &&
+                        <Link href='/cart' className="hover:text-gray-300 hover:bg-gray-700 p-4 rounded">
+                            {t("header.shoppingCart")}
+                        </Link>
+                    }
+                    {loggedInUser && loggedInUser.role === "admin" &&
+                        <Link href="/adminRegister">
+                            {t("header.adminRegister")}
+                        </Link>
+                    }
                     <LanguageDropDown />
-                    {!isAuthenticated &&
+                    {!loggedInUser &&
                         <Link href='/login' className="hover:text-gray-300 hover:bg-gray-700 p-4 rounded">
                             {t("header.login")}
                         </Link>
                     }
-                    {isAuthenticated &&
-                        <Link href='/logout' className="hover:text-gray-300 hover:bg-gray-700 p-4 rounded">
+                    {loggedInUser &&
+                        <Link href='/' className="hover:text-gray-300 hover:bg-gray-700 p-4 rounded" onClick={handleLogout}>
                             {t("header.logout")}
                         </Link>
                     }

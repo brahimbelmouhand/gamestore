@@ -6,7 +6,8 @@
         "purchase_history": "Aankoopgeschiedenis",
         "languages": "Talen",
         "login": "Aanmelden",
-        "logout": "Afmelden"
+        "logout": "Afmelden",
+        "shoppingCart": "Winkelwagen"
     },
     "home": {
         "title": "Home"
@@ -30,7 +31,8 @@
     "login": {
         "title": "Aanmelden",
         "username": "Gebruikersnaam",
-        "password": "Wachtwoord"
+        "password": "Wachtwoord",
+        "register": "Nog geen account? Registreer nu!"
     },
     "logout": {},
     "register": {
@@ -41,6 +43,16 @@
         "email": "E-mail",
         "username": "Gebruikersnaam",
         "password": "Wachtwoord",
-        "confirm_password": "Bevestig je wachtwoord"
+        "confirm_password": "Bevestig je wachtwoord",
+        "login": "Heeft u al een account? Meld je aan!"
+    },
+    "about": {
+        "title": "Over"
+    },
+    "contact": {
+        "title": "Contact"
+    },
+    "shoppingCart": {
+        "title": "Mijn winkelwagen"
     }
 }

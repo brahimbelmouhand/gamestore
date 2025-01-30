@@ -6,7 +6,8 @@
         "purchase_history": "Purchase History",
         "languages": "Languages",
         "login": "Log In",
-        "logout": "Log Out"
+        "logout": "Log Out",
+        "shoppingCart": "Shopping cart"
     },
     "home": {
         "title": "Home"
@@ -31,9 +32,8 @@
         "title": "Login",
         "username": "Username",
         "password": "Password",
-        "registerLink": "Register now!"
+        "register": "No account? Register now!"
     },
-    "logout": {},
     "register": {
         "title": "Register",
         "firstName": "First name",
@@ -42,6 +42,16 @@
         "email": "E-mail",
         "username": "Username",
         "password": "Password",
-        "confirm_password": "Confirm your password"
+        "confirm_password": "Confirm your password",
+        "login": "Already have an account? Log in!"
+    },
+    "about": {
+        "title": "About"
+    },
+    "contact": {
+        "title": "Contact"
+    },
+    "shoppingCart": {
+        "title": "My shopping cart"
     }
 }
