@@ -14,7 +14,7 @@ const getUserByUsername = async ({ username }: { username: string }): Promise<Us
     return foundUser;
 };
 
-const createUser = async ({ firstName, lastName, birthDate, email, username, password }: UserInput): Promise<User> => {
+const createUser = async ({ firstName, lastName, birthDate, email, username, password, role }: UserInput): Promise<User> => {
     const existingUser = await getUserByUsername({ username });
 
     if (existingUser) {
@@ -22,23 +22,23 @@ const createUser = async ({ firstName, lastName, birthDate, email, username, pas
     }
 
     const hashedPassword = await bcrypt.hash(password, 12);
-    const newUser = new User({ firstName, lastName, birthDate, email, username, password: hashedPassword });
+    const newUser = new User({ firstName, lastName, birthDate, email, username, password: hashedPassword, role: "client" });
 
     return await userDb.createUser(newUser);
 
 };
 
 const authenticate = async ({ username, password }: { username: string, password: string }): Promise<AuthenticationResponse> => {
-    const client = await getUserByUsername({ username });
-    const isValidPassword = bcrypt.compare(password, client.getPassword());
+    const user = await getUserByUsername({ username });
+    const isValidPassword = bcrypt.compare(password, user.getPassword());
     if (!isValidPassword) {
         throw new Error("Password is invalid");
     }
-    const token = generateJWTtoken({ username: client.getUsername(), admin: client.getAdmin() });
+    const token = generateJWTtoken({ username: user.getUsername(), role: user.getRole() });
     return {
         token: token,
         username: username,
-        admin: client.getAdmin()
+        role: user.getRole()
     }
 }
 

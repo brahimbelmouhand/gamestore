@@ -17,6 +17,7 @@ model Client {
     id              Int         @id @default(autoincrement())
     userId          Int         @unique
     user            User        @relation(fields: [userId], references: [id])
+    purchases       Purchase[]
 }
 
 model User {
@@ -27,6 +28,25 @@ model User {
     email           String      @unique
     username        String      @unique
     password        String
+    role            String      @default("client")
     client          Client?
     admin           Admin?
+}
+
+model Game {
+    id              Int         @id @default(autoincrement())
+    gameName        String
+    price           Float
+    genres          String[]
+    imageUrl        String
+    purchases       Purchase[]
+}
+
+model Purchase {
+    id              Int         @id @default(autoincrement())
+    date            DateTime
+    gameId          Int         @unique
+    clientId        Int         @unique
+    game            Game        @relation(fields: [gameId], references: [id])
+    client          Client      @relation(fields: [clientId], references: [id])
 }

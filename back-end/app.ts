@@ -15,7 +15,7 @@ import helmet from 'helmet';
 
 const app = express();
 dotenv.config();
-const port = process.env.APP_PORT || 8081
+const port = process.env.APP_PORT || 5001
 app.use(helmet());
 app.use(cors({ origin: process.env.FRONTEND_URL }));
 app.use(bodyParser.json());
@@ -63,6 +63,6 @@ app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
     }
 });
 
-app.listen(port || 3000, () => {
+app.listen(port || 5001, () => {
     console.log(`GameWebsite API is running on port ${port}.`);
 });

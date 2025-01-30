@@ -1,0 +1,5 @@
+-- AlterTable
+ALTER TABLE "Game" ALTER COLUMN "price" SET DATA TYPE DOUBLE PRECISION;
+
+-- AlterTable
+ALTER TABLE "User" ADD COLUMN     "role" TEXT NOT NULL DEFAULT 'client';

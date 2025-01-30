@@ -8,7 +8,7 @@ type UserInput = {
     email: string;
     username: string;
     password: string;
-    admin?: boolean;
+    role?: Role;
 };
 
 type ClientInput = {
@@ -22,13 +22,22 @@ type AdminInput = {
 };
 
 type AuthenticationResponse = {
-    token: string,
     username: string,
-    admin: boolean
-}
+    role: string,
+    token: string
+};
+
+type GameInput = {
+    id?: number,
+    gamename: string,
+    price: number,
+    genres: string[],
+    imageUrl: string
+};
 
 export { Role };
 export { UserInput };
 export { AdminInput };
 export { ClientInput };
 export { AuthenticationResponse };
+export { GameInput };

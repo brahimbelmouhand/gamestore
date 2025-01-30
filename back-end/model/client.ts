@@ -1,5 +1,5 @@
 import User from "./user";
-import { Client as ClientPrisma, User as UserPrisma } from '@prisma/client';
+import { User as UserPrisma, Client as ClientPrisma } from '@prisma/client';
 class Client {
     private id?: number;
     private user: User;
@@ -27,7 +27,7 @@ class Client {
     static from({
         id,
         user
-    }: ClientPrisma & { user: UserPrisma }) {
+    }: ClientPrisma & { user: UserPrisma }): Client {
         return new Client({
             id,
             user: User.from(user)

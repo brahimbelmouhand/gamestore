@@ -1,4 +1,5 @@
 import { User as UserPrisma } from "@prisma/client";
+import { Role } from "../types";
 
 class User {
     private id?: number;
@@ -8,9 +9,9 @@ class User {
     private email: string;
     private username: string;
     private password: string;
-    private admin = false;
+    private role: Role;
 
-    constructor(user: { id?: number, firstName: string, lastName: string, birthDate: Date, email: string, username: string, password: string }) {
+    constructor(user: { id?: number, firstName: string, lastName: string, birthDate: Date, email: string, username: string, password: string, role: Role }) {
         this.validate(user);
 
         this.firstName = user.firstName;
@@ -19,6 +20,7 @@ class User {
         this.email = user.email;
         this.username = user.username;
         this.password = user.password;
+        this.role = user.role;
     }
 
     getId(): number | undefined {
@@ -47,31 +49,34 @@ class User {
         return this.password;
     }
 
-    getAdmin(): boolean {
-        return this.admin;
+    getRole(): Role {
+        return this.role;
     }
 
-    validate(user: { firstName: string, lastName: string, birthDate: Date, email: string, username: string, password: string }) {
+    validate(user: { firstName: string, lastName: string, birthDate: Date, email: string, username: string, password: string, role: Role }) {
         if (!user.firstName.trim()) {
-            throw new Error("First name is required!")
+            throw new Error("First name is required!");
         }
         if (!user.lastName.trim()) {
-            throw new Error("Last name is required!")
+            throw new Error("Last name is required!");
         }
         if (!user.birthDate) {
-            throw new Error("Birth date is required!")
+            throw new Error("Birth date is required!");
         }
         if (!user.email) {
-            throw new Error("Email is required.")
+            throw new Error("Email is required!");
         }
         if (!new RegExp(/^[^\s@]+@[^\s@]+\.[^\s@]+$/).test(user.email)) {
             throw new Error("Entered email is invalid.");
         }
         if (!user.username.trim()) {
-            throw new Error("Username is required!")
+            throw new Error("Username is required!");
         }
         if (!user.password.trim()) {
-            throw new Error("Password is required!")
+            throw new Error("Password is required!");
+        }
+        if (!user.role) {
+            throw new Error("Role is required!");
         }
     }
 
@@ -82,7 +87,8 @@ class User {
         birthDate,
         email,
         username,
-        password
+        password,
+        role
     }: UserPrisma) {
         return new User({
             id,
@@ -91,7 +97,8 @@ class User {
             birthDate,
             email,
             username,
-            password
+            password,
+            role: role as Role
         })
     }
 }
