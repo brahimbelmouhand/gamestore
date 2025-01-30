@@ -9,11 +9,14 @@ import userRouter from './controller/user.routes';
 import clientRouter from './controller/client.routes';
 import adminRouter from './controller/admin.routes';
 import bodyParser from 'body-parser';
+import gameRouter from './controller/game.routes';
+import purchaseRouter from './controller/purchase.routes';
+import helmet from 'helmet';
 
 const app = express();
 dotenv.config();
 const port = process.env.APP_PORT || 8081
-
+app.use(helmet());
 app.use(cors({ origin: process.env.FRONTEND_URL }));
 app.use(bodyParser.json());
 
@@ -22,13 +25,15 @@ app.use(
         secret: process.env.JWT_SECRET || 'default_secret',
         algorithms: ['HS256'],
     }).unless({
-        path: ['/api-docs', /^\/api-docs\/.*/, '/user/login', '/user/register', '/status'],
+        path: ['/api-docs', /^\/api-docs\/.*/, '/status', '/user/login', '/user/register', '/game/all', /^\/client\/.*/],
     })
 );
 
 app.use('/user', userRouter);
 app.use('/client', clientRouter);
 app.use('/admin', adminRouter);
+app.use('/game', gameRouter);
+app.use('/purchase', purchaseRouter);
 
 app.get('/status', (req, res) => {
     res.json({ message: 'GameWebsite API is running...' });
