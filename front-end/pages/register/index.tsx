@@ -9,6 +9,7 @@ import { useState } from "react";
 const Register: React.FC = () => {
     const { t, i18n } = useTranslation();
     const router = useRouter();
+    const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_])[A-Za-z\d\W_]{8,}$/;
     const [userInfo, setUserInfo] = useState<User>({
         firstName: "",
         lastName: "",
@@ -17,7 +18,8 @@ const Register: React.FC = () => {
         username: "",
         password: ""
     });
-
+    const [passwordError, setPasswordError] = useState<string>("");
+    const [confirmPasswordError, setConfirmPasswordError] = useState<string>("");
     const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         try {
@@ -40,12 +42,29 @@ const Register: React.FC = () => {
                 const parsedDate = new Date(value);
                 setUserInfo((prevUserInfo) => ({ ...prevUserInfo, [name]: parsedDate }));
             }
+            else if (name === "password") {
+                setUserInfo((prevUserInfo) => ({ ...prevUserInfo, [name]: value }));
+
+                if (!passwordPattern.test(value)) {
+                    setPasswordError("Password must be at least:\n- 8 characters long\n- 1 uppercase letter\n- 1 lowercase letter\n- 1 number\n- 1 special character");
+                }
+                else {
+                    setPasswordError("");
+                }
+            }
+            else if (name === "confirmPassword") {
+                if (value !== userInfo.password) {
+                    setConfirmPasswordError("Passwords do not match!");
+                } else {
+                    setConfirmPasswordError("");
+                }
+            }
             else {
                 setUserInfo((prevUserInfo) => ({ ...prevUserInfo, [name]: value }));
             }
             console.log(userInfo)
         } catch (error) {
-            console.log("handlechange doesn't work: ", error);
+            console.log("handleChange() doesn't work: ", error);
         }
     }
 
@@ -83,6 +102,7 @@ const Register: React.FC = () => {
                                         value={userInfo.lastName}
                                         required
                                     />
+
                                 </div>
                             </div>
                             <div className='flex flex-col mb-6 mx-3'>
@@ -130,14 +150,18 @@ const Register: React.FC = () => {
                                         onChange={handleChange}
                                         required
                                     />
+                                    <pre className="text-red-400">{passwordError}</pre>
                                 </div>
                                 <div className='flex flex-col mb-6 mx-3'>
                                     <label className='font-semibold font-sans mx-2 mt-2'>{t("register.confirm_password")}:</label>
                                     <input className='border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500'
                                         type="password"
                                         placeholder={t("register.confirm_password")}
+                                        name="confirmPassword"
+                                        onChange={handleChange}
                                         required
                                     />
+                                    <pre className="text-red-400">{confirmPasswordError}</pre>
                                 </div>
                             </div>
                             <input className='border-black text-white bg-blue-500 hover:bg-blue-600 disabled:bg-gray-300  rounded px-2 py-1 text-lg mb-6'
