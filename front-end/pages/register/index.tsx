@@ -5,6 +5,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState } from "react";
+import DOMpurify from "dompurify";
 
 const Register: React.FC = () => {
     const { t, i18n } = useTranslation();
@@ -23,8 +24,16 @@ const Register: React.FC = () => {
     const [confirmPasswordError, setConfirmPasswordError] = useState<string>("");
     const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
+
+        const sanitizedUserInfo = {
+            ...userInfo,
+            firstName: DOMpurify.sanitize(userInfo.firstName || ""),
+            lastName: DOMpurify.sanitize(userInfo.lastName || ""),
+            email: DOMpurify.sanitize(userInfo.email || ""),
+            username: DOMpurify.sanitize(userInfo.username || "")
+        }
         try {
-            const response = await UserService.registerUser(userInfo);
+            const response = await UserService.registerUser(sanitizedUserInfo);
             if (response) {
                 router.push("/login");
             } else {

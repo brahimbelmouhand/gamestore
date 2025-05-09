@@ -5,6 +5,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
+import DOMpurify from 'dompurify';
 
 const Login: React.FC = () => {
     const [isRememberingPassword, setRememberPassword] = useState<boolean>(false);
@@ -37,7 +38,13 @@ const Login: React.FC = () => {
 
     const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        const response = await UserService.loginUser(userInfo);
+
+        const sanitizedUserInfo = {
+            ...userInfo,
+            username: DOMpurify.sanitize(userInfo.username || ""),
+            password: DOMpurify.sanitize(userInfo.password)
+        }
+        const response = await UserService.loginUser(sanitizedUserInfo);
         if (response != undefined) {
             if (response.ok) {
                 const data = await response.json();

@@ -6,6 +6,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState } from "react";
+import DOMpurify from "dompurify";
 
 const AdminRegister: React.FC = () => {
     const { t, i18n } = useTranslation();
@@ -21,8 +22,17 @@ const AdminRegister: React.FC = () => {
     });
     const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
+
+        const sanitizedUserInfo = {
+            ...userInfo,
+            firstName: DOMpurify.sanitize(userInfo.firstName || ""),
+            lastName: DOMpurify.sanitize(userInfo.lastName || ""),
+            email: DOMpurify.sanitize(userInfo.email || ""),
+            username: DOMpurify.sanitize(userInfo.username || "")
+        };
+
         try {
-            const response = await AdminService.registerAdmin(userInfo);
+            const response = await AdminService.registerAdmin(sanitizedUserInfo);
             if (response) {
                 setSuccessMessage("Created new administrator successfully.");
             } else {
