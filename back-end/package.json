@@ -26,9 +26,11 @@
   "devDependencies": {
     "@types/bcrypt": "^5.0.2",
     "@types/cors": "^2.8.17",
+    "@types/sanitize-html": "^2.16.0",
     "@types/swagger-jsdoc": "^6.0.4",
     "@types/swagger-ui-express": "^4.1.7",
-    "prisma": "^6.1.0"
+    "prisma": "^6.1.0",
+    "sanitize-html": "^2.16.0"
   },
   "scripts": {
     "start": "nodemon -L app.ts --delay 3"
