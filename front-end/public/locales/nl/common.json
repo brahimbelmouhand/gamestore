@@ -1,16 +1,17 @@
 {
     "header": {
-        "home": "Home",
+        "home": "Startpagina",
         "news": "Nieuws",
         "store": "Winkel",
         "purchase_history": "Aankoopgeschiedenis",
         "languages": "Talen",
-        "login": "Aanmelden",
-        "logout": "Afmelden",
-        "shoppingCart": "Winkelwagen"
+        "shoppingCart": "Winkelwagen",
+        "adminRegister": "Beheerder registreren",
+        "login": "Inloggen",
+        "logout": "Uitloggen"
     },
     "home": {
-        "title": "Home"
+        "title": "Startpagina"
     },
     "news": {
         "title": "Nieuws"
@@ -28,31 +29,33 @@
         "french": "Frans",
         "japanese": "Japans"
     },
+    "shoppingCart": {
+        "title": "Mijn winkelwagen"
+    },
+    "adminRegister": {
+        "title": "Beheerder registreren"
+    },
     "login": {
-        "title": "Aanmelden",
+        "title": "Inloggen",
         "username": "Gebruikersnaam",
         "password": "Wachtwoord",
         "register": "Nog geen account? Registreer nu!"
     },
-    "logout": {},
     "register": {
         "title": "Registreren",
         "firstName": "Voornaam",
         "lastName": "Achternaam",
         "birthDate": "Geboortedatum",
-        "email": "E-mail",
+        "email": "E-mailadres",
         "username": "Gebruikersnaam",
         "password": "Wachtwoord",
         "confirm_password": "Bevestig je wachtwoord",
-        "login": "Heeft u al een account? Meld je aan!"
+        "login": "Heb je al een account? Log in!"
     },
     "about": {
         "title": "Over"
     },
     "contact": {
         "title": "Contact"
-    },
-    "shoppingCart": {
-        "title": "Mijn winkelwagen"
     }
 }

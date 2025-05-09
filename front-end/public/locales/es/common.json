@@ -3,11 +3,12 @@
         "home": "Inicio",
         "news": "Noticias",
         "store": "Tienda",
-        "purchase_history": "Historial de Compras",
+        "purchase_history": "Historial de compras",
         "languages": "Idiomas",
+        "shoppingCart": "Carrito de compras",
+        "adminRegister": "Registrar administrador",
         "login": "Iniciar sesión",
-        "logout": "Cerrar sesión",
-        "shoppingCart": "Carrito de compras"
+        "logout": "Cerrar sesión"
     },
     "home": {
         "title": "Inicio"
@@ -19,34 +20,42 @@
         "title": "Tienda"
     },
     "purchase_history": {
-        "title": "Historial de Compras"
+        "title": "Historial de compras"
     },
     "languages": {
         "english": "Inglés",
-        "dutch": "Holandés",
+        "dutch": "Neerlandés",
         "german": "Alemán",
         "french": "Francés",
         "japanese": "Japonés"
+    },
+    "shoppingCart": {
+        "title": "Mi carrito de compras"
+    },
+    "adminRegister": {
+        "title": "Registrar administrador"
     },
     "login": {
         "title": "Iniciar sesión",
         "username": "Nombre de usuario",
         "password": "Contraseña",
-        "register": "¿No tienes cuenta? ¡Regístrate ahora!"
+        "register": "¿No tienes una cuenta? ¡Regístrate ahora!"
     },
-    "logout": {},
     "register": {
-        "title": "Registrar",
-        "firstName": "Nombre de pila",
+        "title": "Registrarse",
+        "firstName": "Nombre",
         "lastName": "Apellido",
         "birthDate": "Fecha de nacimiento",
-        "email": "E-mail",
+        "email": "Correo electrónico",
         "username": "Nombre de usuario",
         "password": "Contraseña",
-        "confirm_password": "Confirm your password",
+        "confirm_password": "Confirma tu contraseña",
         "login": "¿Ya tienes una cuenta? ¡Inicia sesión!"
     },
-    "shoppingCart": {
-        "title": "Mi carrito de compras"
+    "about": {
+        "title": "Acerca de"
+    },
+    "contact": {
+        "title": "Contacto"
     }
 }

@@ -5,9 +5,10 @@
         "store": "Store",
         "purchase_history": "Purchase History",
         "languages": "Languages",
+        "shoppingCart": "Shopping cart",
+        "adminRegister": "Register admin",
         "login": "Log In",
-        "logout": "Log Out",
-        "shoppingCart": "Shopping cart"
+        "logout": "Log Out"
     },
     "home": {
         "title": "Home"
@@ -27,6 +28,12 @@
         "german": "German",
         "french": "French",
         "japanese": "Japanese"
+    },
+    "shoppingCart": {
+        "title": "My shopping cart"
+    },
+    "adminRegister": {
+        "title": "Register admin"
     },
     "login": {
         "title": "Login",
@@ -50,8 +57,5 @@
     },
     "contact": {
         "title": "Contact"
-    },
-    "shoppingCart": {
-        "title": "My shopping cart"
     }
 }

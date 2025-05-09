@@ -12,7 +12,10 @@ The use of JWT security.
 ## After
 Describe in a few sentences what you
 - kept in your project
+I kept the JWT because it's a secure way for authenticating and authorizing a user
 - changed in your project
+I added front-end password validation to force the client to use more secure passwords upon registration
+I added limits on how many times you can try to login or register to prevent online bruteforce attacks
 (explain how you found it, and why you kept/changed it)
 ## Code Examples
 Mention here wat parts of the code you changed (referencing exact class/file-name and code lines)

@@ -10,6 +10,7 @@ const Register: React.FC = () => {
     const { t, i18n } = useTranslation();
     const router = useRouter();
     const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_])[A-Za-z\d\W_]{8,}$/;
+    const [isDisabled, setDisabled] = useState<boolean>(true);
     const [userInfo, setUserInfo] = useState<User>({
         firstName: "",
         lastName: "",
@@ -37,7 +38,12 @@ const Register: React.FC = () => {
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         try {
             const { name, value } = event.target;
-
+            if (!value) {
+                setDisabled(true);
+            }
+            else {
+                setDisabled(false);
+            }
             if (name === "birthDate") {
                 const parsedDate = new Date(value);
                 setUserInfo((prevUserInfo) => ({ ...prevUserInfo, [name]: parsedDate }));
@@ -47,16 +53,20 @@ const Register: React.FC = () => {
 
                 if (!passwordPattern.test(value)) {
                     setPasswordError("Password must be at least:\n- 8 characters long\n- 1 uppercase letter\n- 1 lowercase letter\n- 1 number\n- 1 special character");
+                    setDisabled(true);
                 }
                 else {
                     setPasswordError("");
+                    setDisabled(false);
                 }
             }
             else if (name === "confirmPassword") {
                 if (value !== userInfo.password) {
                     setConfirmPasswordError("Passwords do not match!");
+                    setDisabled(true);
                 } else {
                     setConfirmPasswordError("");
+                    setDisabled(false);
                 }
             }
             else {
@@ -167,6 +177,7 @@ const Register: React.FC = () => {
                             <input className='border-black text-white bg-blue-500 hover:bg-blue-600 disabled:bg-gray-300  rounded px-2 py-1 text-lg mb-6'
                                 type='submit'
                                 value={t("register.title")}
+                                disabled={isDisabled}
                             />
                             <span className='flex justify-center'>
                                 <Link href="/login" className='text-blue-400 hover:underline'>{t("register.login")}</Link>

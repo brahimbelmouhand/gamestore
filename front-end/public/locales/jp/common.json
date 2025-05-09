@@ -5,9 +5,10 @@
         "store": "ストア",
         "purchase_history": "購入履歴",
         "languages": "言語",
+        "shoppingCart": "ショッピングカート",
+        "adminRegister": "管理者登録",
         "login": "ログイン",
-        "logout": "ログアウト",
-        "shoppingCart": "ショッピングカート"
+        "logout": "ログアウト"
     },
     "home": {
         "title": "ホーム"
@@ -28,31 +29,33 @@
         "french": "フランス語",
         "japanese": "日本語"
     },
+    "shoppingCart": {
+        "title": "マイショッピングカート"
+    },
+    "adminRegister": {
+        "title": "管理者登録"
+    },
     "login": {
         "title": "ログイン",
         "username": "ユーザー名",
         "password": "パスワード",
-        "register": "アカウントをお持ちではありませんか？今すぐ登録！"
+        "register": "アカウントがありませんか？今すぐ登録！"
     },
-    "logout": {},
     "register": {
-        "title": "登録",
-        "firstName": "名前",
-        "lastName": "苗字",
+        "title": "新規登録",
+        "firstName": "名",
+        "lastName": "姓",
         "birthDate": "生年月日",
-        "email": "Eメール",
+        "email": "メールアドレス",
         "username": "ユーザー名",
         "password": "パスワード",
         "confirm_password": "パスワードを確認",
         "login": "すでにアカウントをお持ちですか？ログイン！"
     },
     "about": {
-        "title": "概要"
+        "title": "このサイトについて"
     },
     "contact": {
         "title": "お問い合わせ"
-    },
-    "shoppingCart": {
-        "title": "私のショッピングカート"
     }
 }

@@ -2,12 +2,13 @@
     "header": {
         "home": "Startseite",
         "news": "Nachrichten",
-        "store": "Shop",
+        "store": "Store",
         "purchase_history": "Kaufhistorie",
         "languages": "Sprachen",
+        "shoppingCart": "Einkaufswagen",
+        "adminRegister": "Administrator registrieren",
         "login": "Einloggen",
-        "logout": "Aufloggen",
-        "shoppingCart": "Warenkorb"
+        "logout": "Ausloggen"
     },
     "home": {
         "title": "Startseite"
@@ -16,41 +17,45 @@
         "title": "Nachrichten"
     },
     "store": {
-        "title": "Shop"
+        "title": "Store"
     },
     "purchase_history": {
         "title": "Kaufhistorie"
     },
     "languages": {
         "english": "Englisch",
-        "dutch": "Niederlandisch",
+        "dutch": "Niederländisch",
         "german": "Deutsch",
         "french": "Französisch",
         "japanese": "Japanisch"
+    },
+    "shoppingCart": {
+        "title": "Mein Einkaufswagen"
+    },
+    "adminRegister": {
+        "title": "Administrator registrieren"
     },
     "login": {
         "title": "Einloggen",
         "username": "Benutzername",
         "password": "Passwort",
-        "register": "No account? Register now!"
+        "register": "Kein Konto? Jetzt registrieren!"
     },
     "register": {
         "title": "Registrieren",
         "firstName": "Vorname",
         "lastName": "Nachname",
         "birthDate": "Geburtsdatum",
-        "email": "E-mail",
+        "email": "E-Mail",
         "username": "Benutzername",
         "password": "Passwort",
-        "login": "Sie haben bereits ein Konto? Einloggen!"
+        "confirm_password": "Passwort bestätigen",
+        "login": "Hast du schon ein Konto? Einloggen!"
     },
     "about": {
-        "title": "Über"
+        "title": "Über uns"
     },
     "contact": {
         "title": "Kontakt"
-    },
-    "shoppingCart": {
-        "title": "Mein Warenkorb"
     }
 }

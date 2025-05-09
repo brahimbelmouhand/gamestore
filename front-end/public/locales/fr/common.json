@@ -1,25 +1,26 @@
 {
     "header": {
         "home": "Accueil",
-        "news": "Actualité",
+        "news": "Actualités",
         "store": "Boutique",
-        "purchase_history": "Historique d'achat",
-        "login": "Se Connecter",
-        "logout": "Se Déconnecter",
+        "purchase_history": "Historique d'achats",
         "languages": "Langues",
-        "shoppingCart": "Panier"
+        "shoppingCart": "Panier",
+        "adminRegister": "Inscrire un admin",
+        "login": "Connexion",
+        "logout": "Déconnexion"
     },
     "home": {
         "title": "Accueil"
     },
     "news": {
-        "title": "Actualité"
+        "title": "Actualités"
     },
     "store": {
         "title": "Boutique"
     },
     "purchase_history": {
-        "title": "Historique d'achat"
+        "title": "Historique d'achats"
     },
     "languages": {
         "english": "Anglais",
@@ -28,31 +29,33 @@
         "french": "Français",
         "japanese": "Japonais"
     },
+    "shoppingCart": {
+        "title": "Mon panier"
+    },
+    "adminRegister": {
+        "title": "Inscrire un admin"
+    },
     "login": {
-        "title": "Se Connecter",
+        "title": "Connexion",
         "username": "Nom d'utilisateur",
         "password": "Mot de passe",
-        "register": "Pas de compte? Inscrivez-vous maintenant!"
+        "register": "Pas de compte ? Inscrivez-vous !"
     },
-    "logoout": {},
     "register": {
-        "title": "Registrer",
+        "title": "Inscription",
         "firstName": "Prénom",
-        "lastName": "Nom",
+        "lastName": "Nom de famille",
         "birthDate": "Date de naissance",
         "email": "E-mail",
         "username": "Nom d'utilisateur",
         "password": "Mot de passe",
-        "confirm_password": "Confirme ton mot de passe",
-        "login": "Vous avez déjà un compte? Connectez-vous!"
+        "confirm_password": "Confirmez votre mot de passe",
+        "login": "Vous avez déjà un compte ? Connectez-vous !"
     },
     "about": {
         "title": "À propos"
     },
     "contact": {
         "title": "Contact"
-    },
-    "shoppingCart": {
-        "title": "Mon panier"
     }
 }
