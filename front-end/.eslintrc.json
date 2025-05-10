@@ -1,0 +1,8 @@
+{
+    "plugins": [
+        "react-security"
+    ],
+    "extends": [
+        "plugin:react-security/recommended"
+    ]
+}
