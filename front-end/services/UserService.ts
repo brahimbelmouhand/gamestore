@@ -18,6 +18,15 @@ const loginUser = async (user: User) => {
     });
 }
 
+const deleteUser = async (username: string) => {
+    return await fetch(process.env.NEXT_PUBLIC_API_URL + "/delete/" + username, {
+        method: "DELETE",
+        headers: {
+            "Content-Type": "application/json"
+        }
+    });
+}
+
 const fetchWithToken = (url: string, options: RequestInit = {}) => {
     const token = localStorage.getItem("loggedInUser") ? JSON.parse(localStorage.getItem("loggedInUser")!).token : null;
 
@@ -34,6 +43,7 @@ const fetchWithToken = (url: string, options: RequestInit = {}) => {
 const UserService = {
     registerUser,
     loginUser,
+    deleteUser,
     fetchWithToken
 };
 
