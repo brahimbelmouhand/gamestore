@@ -19,14 +19,19 @@ const Header: React.FC<{ loggedInUser: User | null, handleLogout: () => void }> 
                     <Link href="/store" className="hover:text-gray-300 hover:bg-gray-700 p-4 rounded">
                         {t("header.store")}
                     </Link>
-                    {loggedInUser && loggedInUser.role === "client" &&
+                    {loggedInUser &&
                         <Link href='/purchaseHistory' className="hover:text-gray-300 hover:bg-gray-700 p-4 rounded">
                             {t("header.purchase_history")}
                         </Link>
                     }
-                    {loggedInUser && loggedInUser.role === "client" &&
+                    {loggedInUser &&
                         <Link href='/cart' className="hover:text-gray-300 hover:bg-gray-700 p-4 rounded">
                             {t("header.shoppingCart")}
+                        </Link>
+                    }
+                    {loggedInUser &&
+                        <Link href='/settings' className="hover:text-gray-300 hover:bg-gray-700 p-4 rounded">
+                            Settings
                         </Link>
                     }
                     {loggedInUser && loggedInUser.role === "admin" &&
@@ -46,7 +51,7 @@ const Header: React.FC<{ loggedInUser: User | null, handleLogout: () => void }> 
                         </Link>
                     }
                 </nav>
-            </header>
+            </header >
         </>
     );
 }
