@@ -42,4 +42,15 @@ userRouter.post('/login', async (req: Request, res: Response, next: NextFunction
     }
 })
 
+userRouter.delete('/delete/:username', async (req: Request, res: Response, next: NextFunction) => {
+    try {
+        const sanitizedUsername = sanitizehtml(req.params.username);
+        const response = await userService.deleteUser({ username: sanitizedUsername });
+        res.status(200).json({ message: `User ${sanitizedUsername} deleted successfully`, ...response });
+    }
+    catch (error) {
+        next(error);
+    }
+});
+
 export default userRouter;

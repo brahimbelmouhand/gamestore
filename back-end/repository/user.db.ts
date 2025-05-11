@@ -60,11 +60,27 @@ const createUser = async (user: User): Promise<User> => {
     }
 }
 
+const deleteUser = async (user: User) => {
+    try {
+        const userPrisma = await database.user.delete({
+            where: {
+                id: user.getId()
+            }
+        })
+
+        return User.from(userPrisma);
+    }
+    catch (error) {
+        console.error(error);
+        throw new Error("Database error. See server log for details.");
+    }
+}
 const userDb = {
     getAllUsers,
     getUserById,
     getUserByUsername,
-    createUser
+    createUser,
+    deleteUser
 }
 
 export default userDb;

@@ -28,6 +28,14 @@ const createUser = async ({ firstName, lastName, birthDate, email, username, pas
 
 };
 
+const deleteUser = async ({ username }: { username: string }) => {
+    const deletingUser = await getUserByUsername({ username: username })
+    if (deletingUser) {
+        return await userDb.deleteUser(deletingUser);
+    }
+    throw new Error(`Cannot delete user ${username}`);
+}
+
 const authenticate = async ({ username, password }: { username: string, password: string }): Promise<AuthenticationResponse> => {
     const user = await getUserByUsername({ username });
     const isValidPassword = bcrypt.compare(password, user.getPassword());
@@ -45,6 +53,7 @@ const authenticate = async ({ username, password }: { username: string, password
 const userService = {
     getUserByUsername,
     createUser,
+    deleteUser,
     authenticate
 };
 
