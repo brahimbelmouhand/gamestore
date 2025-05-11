@@ -15,9 +15,27 @@ import helmet from 'helmet';
 
 const app = express();
 dotenv.config();
+
 const port = process.env.APP_PORT || 5001
-app.use(helmet());
-app.use(cors({ origin: process.env.FRONTEND_URL }));
+const allowedDomain = process.env.FRONTEND_URL || "https://localhost:3001"
+
+//Anti-clickjacking
+app.use(helmet.frameguard({ action: 'sameorigin' }));
+
+//CSP for the back-end
+app.use(
+    helmet.contentSecurityPolicy({
+        directives: {
+            defaultSrc: ["'self'"],
+            scriptSrc: ["'self'", allowedDomain],
+            styleSrc: ["'self'"],
+            imgSrc: ["'self'", allowedDomain],
+            fontSrc: ["'self'"]
+        }
+    })
+);
+
+app.use(cors({ origin: allowedDomain }));
 app.use(bodyParser.json());
 
 app.use(
