@@ -21,14 +21,19 @@
     "prisma-client": "^0.0.0",
     "swagger-jsdoc": "^6.2.8",
     "swagger-ui-express": "^5.0.1",
-    "ts-jest": "^29.2.5"
+    "ts-jest": "^29.2.5",
+    "winston": "^3.17.0"
   },
   "devDependencies": {
+    "@cyclonedx/bom": "^4.1.0",
     "@types/bcrypt": "^5.0.2",
     "@types/cors": "^2.8.17",
     "@types/sanitize-html": "^2.16.0",
     "@types/swagger-jsdoc": "^6.0.4",
     "@types/swagger-ui-express": "^4.1.7",
+    "cyclonedx-bom": "^0.0.9",
+    "eslint": "^9.26.0",
+    "eslint-plugin-security": "^3.0.1",
     "prisma": "^6.1.0",
     "sanitize-html": "^2.16.0"
   },

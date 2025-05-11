@@ -1,0 +1,14 @@
+//This is for ignoring an <input> warning in login/index.tsx
+{
+  "extends": [
+    "development"
+  ],
+  "hints": {
+    "axe/language": [
+      "default",
+      {
+        "valid-lang": "off"
+      }
+    ]
+  }
+}
