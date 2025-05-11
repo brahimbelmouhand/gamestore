@@ -115,13 +115,17 @@ const Login: React.FC = () => {
                                 <div className='mb-6'>
                                     <input className='mr-2'
                                         type='checkbox'
+                                        title="Remember my password"
                                         checked={isRememberingPassword}
                                         onChange={() => setRememberPassword(!isRememberingPassword)}
                                     />
                                     <label>Remember my password</label>
                                 </div>
-                                <span className='flex justify-center'>
+                                <span className='flex justify-center mb-6'>
                                     <Link href="register" className=' text-blue-400 hover:underline'>{t("login.register")}</Link>
+                                </span>
+                                <span className='flex justify-center mb-6'>
+                                    <Link href='forgotPassword' className='text-blue-400 hover:underline text-sm'>Forgot password?</Link>
                                 </span>
                             </form>
                         </section>
