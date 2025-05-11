@@ -3,8 +3,6 @@ import UserService from "@/services/UserService";
 import { GetServerSideProps } from "next";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import Link from "next/link";
-import { useRouter } from "next/router";
 import { useState } from "react";
 import DOMpurify from "dompurify";
 
@@ -20,6 +18,7 @@ const AdminRegister: React.FC = () => {
         password: "",
         role: "admin"
     });
+
     const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
 
@@ -154,7 +153,7 @@ const AdminRegister: React.FC = () => {
             </main>
         </>
     );
-}
+};
 export default AdminRegister;
 export const getServerSideProps: GetServerSideProps = async (context) => {
     const { locale } = context;
