@@ -1,0 +1,2966 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>zap_report</title>
+<link
+	href="2025-05-10-ZAP-Report-/normalize/normalize.css" rel="stylesheet">
+<link
+	href="2025-05-10-ZAP-Report-/themes/original/main.css" rel="stylesheet">
+<link
+	href="2025-05-10-ZAP-Report-/themes/original/colors.css" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<h1>zap_report</h1>
+		<p>
+			<span>Generated with</span> <a href="https://zaproxy.org"><img
+				src="2025-05-10-ZAP-Report-/zap32x32.png" alt="The ZAP logo" class="zap-logo">ZAP</a>
+			<span>on Sat 10 May 2025, at 21:23:28</span>
+		</p>
+		<p>ZAP Version: 2.16.1</p>
+		<p>
+			ZAP by <a href="https://checkmarx.com/">Checkmarx</a>
+		</p>
+	</header>
+
+	<main>
+
+		<section id="contents" class="contents">
+			<h2>Contents</h2>
+			<nav>
+				<ol>
+					<li><a
+						href="#about-this-report">About this report</a>
+						<ol>
+							<li><a
+								href="#report-description">Report description</a></li>
+							<li><a
+								href="#report-parameters">Report parameters</a></li>
+						</ol></li>
+					<data-th-block>
+					<li><a
+						href="#summaries">Summaries</a>
+						<ol>
+							<li><a
+								href="#risk-confidence-counts">Alert counts by risk and confidence</a></li>
+							<li><a
+								href="#site-risk-counts">Alert counts by site and risk</a></li>
+							<li><a
+								href="#alert-type-counts">Alert counts by alert type</a></li>
+						</ol></li>
+					<li><a
+						href="#alerts">Alerts</a>
+						<ol>
+							
+							 
+							
+							
+							
+							
+							<li><a
+								href="#alerts--risk-2-confidence-3"><span>Risk</span>=<span
+									class="risk-level">Medium</span>, <span>Confidence</span>=<span
+									class="confidence-level">High</span> <span>(2)</span></a></li>
+							
+							<li><a
+								href="#alerts--risk-2-confidence-2"><span>Risk</span>=<span
+									class="risk-level">Medium</span>, <span>Confidence</span>=<span
+									class="confidence-level">Medium</span> <span>(1)</span></a></li>
+							
+							
+							  
+							
+							
+							
+							
+							
+							
+							<li><a
+								href="#alerts--risk-1-confidence-2"><span>Risk</span>=<span
+									class="risk-level">Low</span>, <span>Confidence</span>=<span
+									class="confidence-level">Medium</span> <span>(2)</span></a></li>
+							
+							
+							  
+							
+							
+							
+							
+							<li><a
+								href="#alerts--risk-0-confidence-3"><span>Risk</span>=<span
+									class="risk-level">Informational</span>, <span>Confidence</span>=<span
+									class="confidence-level">High</span> <span>(1)</span></a></li>
+							
+							<li><a
+								href="#alerts--risk-0-confidence-2"><span>Risk</span>=<span
+									class="risk-level">Informational</span>, <span>Confidence</span>=<span
+									class="confidence-level">Medium</span> <span>(4)</span></a></li>
+							
+							<li><a
+								href="#alerts--risk-0-confidence-1"><span>Risk</span>=<span
+									class="risk-level">Informational</span>, <span>Confidence</span>=<span
+									class="confidence-level">Low</span> <span>(1)</span></a></li>
+							  
+						</ol></li>
+					<li><a
+						href="#appendix">Appendix</a>
+						<ol>
+							<li><a
+								href="#alert-types">Alert types</a></li>
+						</ol></li>
+					</data-th-block>
+				</ol>
+			</nav>
+		</section>
+
+		<section
+			id="about-this-report" class="about-this-report">
+			<h2>About this report</h2>
+
+			<section
+				id="report-description">
+				<h3>Report description</h3>
+				<div class="report-description--container">
+					
+
+<p>
+	
+	  This ZAP report exposes which vulnerabilities my application posesses 
+	  
+</p>
+ 
+				</div>
+			</section>
+
+			<section
+				id="report-parameters">
+				<h3>Report parameters</h3>
+				<div class="report-parameters--container">
+					<h4>Contexts</h4>
+					
+					
+					<p>No contexts were selected, so all contexts were included by default.</p>
+					  
+
+					<h4>Sites</h4>
+					
+					<p>The following sites were included:</p>
+					<ul class="sites-list">
+						<li><span class="site">http://localhost:3001</span></li>
+					</ul>
+					
+					<p>(If no sites were selected, all sites were included by default.)</p>
+					<p>An included site must also be within one of the included contexts for its data to be included in the report.</p>
+
+					<h4>Risk levels</h4>
+					<p>
+						<span>Included</span>:
+						 
+						<span class="included-risk-codes"><span class="risk-level">High</span>, <span class="risk-level">Medium</span>, <span class="risk-level">Low</span>, <span class="risk-level">Informational</span></span>
+					</p>
+					<p>
+						<span>Excluded</span>:
+						 <span>None</span>
+						
+					</p>
+
+					<h4>Confidence levels</h4>
+					<p>
+						<span>Included</span>:
+						
+						
+						<span class="included-confidence-codes"><span class="confidence-level">User Confirmed</span>, <span class="confidence-level">High</span>, <span class="confidence-level">Medium</span>, <span class="confidence-level">Low</span></span>
+					</p>
+					<p>
+						<span>Excluded</span>:
+						
+						
+						<span class="included-confidence-codes"> <span class="confidence-level">User Confirmed</span>, <span class="confidence-level">High</span>, <span class="confidence-level">Medium</span>, <span class="confidence-level">Low</span>, <span class="confidence-level">False Positive</span></span>
+					</p>
+				</div>
+			</section>
+		</section>
+
+		
+		<section>
+			
+		</section>
+		
+		<section id="summaries" class="summaries">
+			<h2>Summaries</h2>
+
+			<section
+				id="risk-confidence-counts">
+				<h3>Alert counts by risk and confidence</h3>
+				<table class="risk-confidence-counts-table">
+					<caption>
+						<p>This table shows the number of alerts for each level of risk and confidence included in the report.</p>
+						<p>(The percentages in brackets represent the count as a percentage of the total number of alerts included in the report, rounded to one decimal place.)</p>
+					</caption>
+					<colgroup>
+						<col>
+						<col>
+					</colgroup>
+					<colgroup>
+						<col
+							style="width: 14.0%"><col
+							style="width: 14.0%"><col
+							style="width: 14.0%"><col
+							style="width: 14.0%">
+						<col style="width: 14.0%">
+					</colgroup>
+					<thead>
+						<tr>
+							<td colspan="2" rowspan="2"></td>
+							<th scope="colgroup"
+								colspan="5">Confidence</th>
+						</tr>
+						<tr>
+							<th scope="col">User Confirmed</th>
+							<th scope="col">High</th>
+							<th scope="col">Medium</th>
+							<th scope="col">Low</th>
+							<th scope="col">Total</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="rowgroup"
+								rowspan="5">Risk</th>
+							<th scope="row">High</th>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0.0%)</span></td>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0.0%)</span></td>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0.0%)</span></td>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0.0%)</span></td>
+							<td><span>0</span><br> <span class="additional-info-percentages">(0.0%)</span></td>
+						</tr>
+						<tr>
+							
+							<th scope="row">Medium</th>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0.0%)</span></td>
+							<td><span>2</span><br> <span
+								class="additional-info-percentages">(18.2%)</span></td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(9.1%)</span></td>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0.0%)</span></td>
+							<td><span>3</span><br> <span class="additional-info-percentages">(27.3%)</span></td>
+						</tr>
+						<tr>
+							
+							<th scope="row">Low</th>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0.0%)</span></td>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0.0%)</span></td>
+							<td><span>2</span><br> <span
+								class="additional-info-percentages">(18.2%)</span></td>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0.0%)</span></td>
+							<td><span>2</span><br> <span class="additional-info-percentages">(18.2%)</span></td>
+						</tr>
+						<tr>
+							
+							<th scope="row">Informational</th>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0.0%)</span></td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(9.1%)</span></td>
+							<td><span>4</span><br> <span
+								class="additional-info-percentages">(36.4%)</span></td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(9.1%)</span></td>
+							<td><span>6</span><br> <span class="additional-info-percentages">(54.5%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row">Total</th>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0.0%)</span></td>
+							<td><span>3</span><br> <span
+								class="additional-info-percentages">(27.3%)</span></td>
+							<td><span>7</span><br> <span
+								class="additional-info-percentages">(63.6%)</span></td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(9.1%)</span></td>
+							<td><span>11</span><br> <span
+								class="additional-info-percentages">(100%)</span></td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+
+			<section
+				id="site-risk-counts">
+				<h3>Alert counts by site and risk</h3>
+				<table class="site-risk-counts-table">
+					<caption>
+						<p>This table shows, for each site for which one or more alerts were raised, the number of alerts raised at each risk level.</p>
+						<p>Alerts with a confidence level of &quot;False Positive&quot; have been excluded from these counts.</p>
+						<p>(The numbers in brackets are the number of alerts raised for the site at or above that risk level.)</p>
+					</caption>
+					<colgroup>
+						<col>
+						<col>
+					</colgroup>
+					<colgroup>
+						<col
+							style="width: 16.25%"><col
+							style="width: 16.25%"><col
+							style="width: 16.25%"><col
+							style="width: 16.25%">
+					</colgroup>
+					<thead>
+						<tr>
+							<td colspan="2" rowspan="2"></td>
+							<th scope="colgroup" colspan="4">Risk</th>
+						</tr>
+						<tr>
+							<th scope="col">
+								<span>High</span><br>  <span
+									class="additional-info-percentages">(= High)</span>  
+							</th>
+							<th scope="col">
+								<span>Medium</span><br>   <span
+									class="additional-info-percentages">(&gt;= Medium)</span> 
+							</th>
+							<th scope="col">
+								<span>Low</span><br>   <span
+									class="additional-info-percentages">(&gt;= Low)</span> 
+							</th>
+							<th scope="col">
+								<span>Informational</span><br>   <span
+									class="additional-info-percentages">(&gt;= Informational)</span> 
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="rowgroup"
+								rowspan="1">Site</th>
+							<th scope="row">http://localhost:3001</th>
+							
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0)</span></td>
+							<td><span>3</span><br> <span
+								class="additional-info-percentages">(3)</span></td>
+							<td><span>2</span><br> <span
+								class="additional-info-percentages">(5)</span></td>
+							<td><span>6</span><br> <span
+								class="additional-info-percentages">(11)</span></td>
+							
+						</tr>
+					</tbody>
+				</table>
+			</section>
+
+			<section
+				id="alert-type-counts">
+				<h3>Alert counts by alert type</h3>
+				<table class="alert-type-counts-table">
+					<caption>
+						<p>This table shows the number of alerts of each alert type, together with the alert type&#39;s risk level.</p>
+						<p>(The percentages in brackets represent each count as a percentage, rounded to one decimal place, of the total number of alerts included in this report.)</p>
+					</caption>
+					<thead>
+						<tr>
+							<th scope="col">Alert type</th>
+							<th scope="col">Risk</th>
+							<th scope="col">Count</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-0">CSP: Failure to Define Directive with No Fallback</a></th>
+							<td class="risk-level">Medium</td>
+							<td><span>17</span><br> <span
+								class="additional-info-percentages">(154.5%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-1">Content Security Policy (CSP) Header Not Set</a></th>
+							<td class="risk-level">Medium</td>
+							<td><span>20</span><br> <span
+								class="additional-info-percentages">(181.8%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-2">Missing Anti-clickjacking Header</a></th>
+							<td class="risk-level">Medium</td>
+							<td><span>10</span><br> <span
+								class="additional-info-percentages">(90.9%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-3">Server Leaks Information via &quot;X-Powered-By&quot; HTTP Response Header Field(s)</a></th>
+							<td class="risk-level">Low</td>
+							<td><span>23</span><br> <span
+								class="additional-info-percentages">(209.1%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-4">X-Content-Type-Options Header Missing</a></th>
+							<td class="risk-level">Low</td>
+							<td><span>31</span><br> <span
+								class="additional-info-percentages">(281.8%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-5">Authentication Request Identified</a></th>
+							<td class="risk-level">Informational</td>
+							<td><span>2</span><br> <span
+								class="additional-info-percentages">(18.2%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-6">Content-Type Header Missing</a></th>
+							<td class="risk-level">Informational</td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(9.1%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-7">Information Disclosure - Sensitive Information in URL</a></th>
+							<td class="risk-level">Informational</td>
+							<td><span>14</span><br> <span
+								class="additional-info-percentages">(127.3%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-8">Information Disclosure - Suspicious Comments</a></th>
+							<td class="risk-level">Informational</td>
+							<td><span>17</span><br> <span
+								class="additional-info-percentages">(154.5%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-9">Modern Web Application</a></th>
+							<td class="risk-level">Informational</td>
+							<td><span>23</span><br> <span
+								class="additional-info-percentages">(209.1%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-10">User Agent Fuzzer</a></th>
+							<td class="risk-level">Informational</td>
+							<td><span>54</span><br> <span
+								class="additional-info-percentages">(490.9%)</span></td>
+						</tr>
+					</tbody>
+					<tfoot>
+						<tr>
+							<th scope="row">Total</th>
+							<td></td>
+							<td>11</td>
+						</tr>
+					</tfoot>
+				</table>
+			</section>
+		</section>
+
+		<section id="alerts" class="alerts">
+			<h2>Alerts</h2>
+			<ol>
+				
+				 
+				 
+				
+				
+				<li id="alerts--risk-2-confidence-3">
+					<h3>
+						<span>Risk</span>=<span
+							class="risk-level">Medium</span>, <span>Confidence</span>=<span
+							class="confidence-level">High</span> <span>(2)</span>
+					</h3>
+					<ol>
+						
+						<li class="alerts--site-li">
+							<h4>
+								<span class="site">http://localhost:3001</span> <span>(2)</span>
+							</h4>
+							<ol>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-0">CSP: Failure to Define Directive with No Fallback</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET http://localhost:3001/login?password=ZAP&amp;username=ZAP</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://cwe.mitre.org/data/definitions/693.html">CWE-693</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/Top10/A05_2021-Security_Misconfiguration/">OWASP_2021_A05</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A6_2017-Security_Misconfiguration.html">OWASP_2017_A06</a></span> 
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>The Content Security Policy fails to define one of the directives that has no fallback. Missing/excluding them is the same as allowing anything.</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Other info</th>
+		<td> 
+<p>The directive(s): form-action is/are among the directives that do not fallback to default-src.</p>
+ </td>
+	</tr>
+	
+	
+	<tr>
+		<th scope="row">Parameter</th>
+		<td><pre><code>Content-Security-Policy</code></pre></td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Evidence</th>
+		<td><pre><code>default-src &#39;self&#39;; script-src &#39;self&#39;; style-src &#39;self&#39;; img-src &#39;self&#39;; font-src &#39;self&#39;; connect-src &#39;self&#39;; object-src &#39;none&#39;; frame-ancestors &#39;none&#39;;</code></pre></td>
+	</tr>
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Ensure that your web server, application server, load balancer, etc. is properly configured to set the Content-Security-Policy header.</p>
+ </td>
+	</tr>
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-1">Content Security Policy (CSP) Header Not Set</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET http://localhost:3001/</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://cwe.mitre.org/data/definitions/693.html">CWE-693</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/Top10/A05_2021-Security_Misconfiguration/">OWASP_2021_A05</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A6_2017-Security_Misconfiguration.html">OWASP_2017_A06</a></span> 
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross Site Scripting (XSS) and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page — covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</p>
+ </td>
+	</tr>
+	
+	
+	
+	
+	
+	
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Ensure that your web server, application server, load balancer, etc. is configured to set the Content-Security-Policy header.</p>
+ </td>
+	</tr>
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+							</ol>
+						</li>
+						
+					</ol>
+				</li>
+				
+				<li id="alerts--risk-2-confidence-2">
+					<h3>
+						<span>Risk</span>=<span
+							class="risk-level">Medium</span>, <span>Confidence</span>=<span
+							class="confidence-level">Medium</span> <span>(1)</span>
+					</h3>
+					<ol>
+						
+						<li class="alerts--site-li">
+							<h4>
+								<span class="site">http://localhost:3001</span> <span>(1)</span>
+							</h4>
+							<ol>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-2">Missing Anti-clickjacking Header</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET http://localhost:3001/</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/11-Client-side_Testing/09-Testing_for_Clickjacking">WSTG-v42-CLNT-09</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/Top10/A05_2021-Security_Misconfiguration/">OWASP_2021_A05</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A6_2017-Security_Misconfiguration.html">OWASP_2017_A06</a></span> 
+				</li>
+				<li>
+					<span><a href="https://cwe.mitre.org/data/definitions/1021.html">CWE-1021</a></span> 
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>The response does not protect against &#39;ClickJacking&#39; attacks. It should include either Content-Security-Policy with &#39;frame-ancestors&#39; directive or X-Frame-Options.</p>
+ </td>
+	</tr>
+	
+	
+	
+	<tr>
+		<th scope="row">Parameter</th>
+		<td><pre><code>x-frame-options</code></pre></td>
+	</tr>
+	
+	
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Modern Web browsers support the Content-Security-Policy and X-Frame-Options HTTP headers. Ensure one of them is set on all web pages returned by your site/app.</p>
+
+<p>If you expect the page to be framed only by pages on your server (e.g. it&#39;s part of a FRAMESET) then you&#39;ll want to use SAMEORIGIN, otherwise if you never expect the page to be framed, you should use DENY. Alternatively consider implementing Content Security Policy&#39;s &quot;frame-ancestors&quot; directive.</p>
+ </td>
+	</tr>
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+							</ol>
+						</li>
+						
+					</ol>
+				</li>
+				
+				
+				  
+				 
+				
+				
+				
+				
+				<li id="alerts--risk-1-confidence-2">
+					<h3>
+						<span>Risk</span>=<span
+							class="risk-level">Low</span>, <span>Confidence</span>=<span
+							class="confidence-level">Medium</span> <span>(2)</span>
+					</h3>
+					<ol>
+						
+						<li class="alerts--site-li">
+							<h4>
+								<span class="site">http://localhost:3001</span> <span>(2)</span>
+							</h4>
+							<ol>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-3">Server Leaks Information via &quot;X-Powered-By&quot; HTTP Response Header Field(s)</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET http://localhost:3001/</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://owasp.org/Top10/A01_2021-Broken_Access_Control/">OWASP_2021_A01</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A3_2017-Sensitive_Data_Exposure.html">OWASP_2017_A03</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/01-Information_Gathering/08-Fingerprint_Web_Application_Framework">WSTG-v42-INFO-08</a></span> 
+				</li>
+				<li>
+					<span><a href="https://cwe.mitre.org/data/definitions/497.html">CWE-497</a></span> 
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>The web/application server is leaking information via one or more &quot;X-Powered-By&quot; HTTP response headers. Access to such information may facilitate attackers identifying other frameworks/components your web application is reliant upon and the vulnerabilities such components may be subject to.</p>
+ </td>
+	</tr>
+	
+	
+	
+	
+	
+	<tr>
+		<th scope="row">Evidence</th>
+		<td><pre><code>X-Powered-By: Next.js</code></pre></td>
+	</tr>
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Ensure that your web server, application server, load balancer, etc. is configured to suppress &quot;X-Powered-By&quot; headers.</p>
+ </td>
+	</tr>
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-4">X-Content-Type-Options Header Missing</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET http://localhost:3001/</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://cwe.mitre.org/data/definitions/693.html">CWE-693</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/Top10/A05_2021-Security_Misconfiguration/">OWASP_2021_A05</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A6_2017-Security_Misconfiguration.html">OWASP_2017_A06</a></span> 
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>The Anti-MIME-Sniffing header X-Content-Type-Options was not set to &#39;nosniff&#39;. This allows older versions of Internet Explorer and Chrome to perform MIME-sniffing on the response body, potentially causing the response body to be interpreted and displayed as a content type other than the declared content type. Current (early 2014) and legacy versions of Firefox will use the declared content type (if one is set), rather than performing MIME-sniffing.</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Other info</th>
+		<td> 
+<p>This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.</p>
+
+<p>At &quot;High&quot; threshold this scan rule will not alert on client or server error responses.</p>
+ </td>
+	</tr>
+	
+	
+	<tr>
+		<th scope="row">Parameter</th>
+		<td><pre><code>x-content-type-options</code></pre></td>
+	</tr>
+	
+	
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Ensure that the application/web server sets the Content-Type header appropriately, and that it sets the X-Content-Type-Options header to &#39;nosniff&#39; for all web pages.</p>
+
+<p>If possible, ensure that the end user uses a standards-compliant and modern web browser that does not perform MIME-sniffing at all, or that can be directed by the web application/web server to not perform MIME-sniffing.</p>
+ </td>
+	</tr>
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+							</ol>
+						</li>
+						
+					</ol>
+				</li>
+				
+				
+				  
+				 
+				
+				
+				<li id="alerts--risk-0-confidence-3">
+					<h3>
+						<span>Risk</span>=<span
+							class="risk-level">Informational</span>, <span>Confidence</span>=<span
+							class="confidence-level">High</span> <span>(1)</span>
+					</h3>
+					<ol>
+						
+						<li class="alerts--site-li">
+							<h4>
+								<span class="site">http://localhost:3001</span> <span>(1)</span>
+							</h4>
+							<ol>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-5">Authentication Request Identified</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET http://localhost:3001/login?password=ZAP&amp;username=ZAP</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>The given request has been identified as an authentication request. The &#39;Other Info&#39; field contains a set of key=value lines which identify any relevant fields. If the request is in a context which has an Authentication Method set to &quot;Auto-Detect&quot; then this rule will change the authentication to match the request identified.</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Other info</th>
+		<td> 
+<p>userParam=username</p>
+
+<p>userValue=ZAP</p>
+
+<p>passwordParam=password</p>
+
+<p>referer=http://localhost:3001/login</p>
+ </td>
+	</tr>
+	
+	
+	<tr>
+		<th scope="row">Parameter</th>
+		<td><pre><code>username</code></pre></td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Evidence</th>
+		<td><pre><code>password</code></pre></td>
+	</tr>
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>This is an informational alert rather than a vulnerability and so there is nothing to fix.</p>
+ </td>
+	</tr>
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+							</ol>
+						</li>
+						
+					</ol>
+				</li>
+				
+				<li id="alerts--risk-0-confidence-2">
+					<h3>
+						<span>Risk</span>=<span
+							class="risk-level">Informational</span>, <span>Confidence</span>=<span
+							class="confidence-level">Medium</span> <span>(4)</span>
+					</h3>
+					<ol>
+						
+						<li class="alerts--site-li">
+							<h4>
+								<span class="site">http://localhost:3001</span> <span>(4)</span>
+							</h4>
+							<ol>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-6">Content-Type Header Missing</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET http://localhost:3001/_next/static/chunks/main.js/</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://cwe.mitre.org/data/definitions/345.html">CWE-345</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/Top10/A05_2021-Security_Misconfiguration/">OWASP_2021_A05</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A6_2017-Security_Misconfiguration.html">OWASP_2017_A06</a></span> 
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>The Content-Type header was either missing or empty.</p>
+ </td>
+	</tr>
+	
+	
+	
+	<tr>
+		<th scope="row">Parameter</th>
+		<td><pre><code>content-type</code></pre></td>
+	</tr>
+	
+	
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Ensure each page is setting the specific and appropriate content-type value for the content being delivered.</p>
+ </td>
+	</tr>
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-7">Information Disclosure - Sensitive Information in URL</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET http://localhost:3001/register?birthDate=2025-05-09&amp;confirmPassword=ZAP&amp;email=zaproxy%40example.com&amp;firstName=ZAP&amp;lastName=ZAP&amp;password=ZAP&amp;username=ZAP</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://cwe.mitre.org/data/definitions/598.html">CWE-598</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/Top10/A01_2021-Broken_Access_Control/">OWASP_2021_A01</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A3_2017-Sensitive_Data_Exposure.html">OWASP_2017_A03</a></span> 
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>The request appeared to contain sensitive information leaked in the URL. This can violate PCI and most organizational compliance policies. You can configure the list of strings for this check to add or remove values specific to your environment.</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Other info</th>
+		<td> 
+<p>The URL contains potentially sensitive information. The following string was found via the pattern: pass</p>
+
+<p>confirmPassword</p>
+ </td>
+	</tr>
+	
+	
+	<tr>
+		<th scope="row">Parameter</th>
+		<td><pre><code>confirmPassword</code></pre></td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Evidence</th>
+		<td><pre><code>confirmPassword</code></pre></td>
+	</tr>
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Do not pass sensitive information in URIs.</p>
+ </td>
+	</tr>
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-9">Modern Web Application</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET http://localhost:3001/</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>The application appears to be a modern web application. If you need to explore it automatically then the Ajax Spider may well be more effective than the standard one.</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Other info</th>
+		<td> 
+<p>A noScript tag has been found, which is an indication that the application works differently with JavaScript enabled compared to when it is not.</p>
+ </td>
+	</tr>
+	
+	
+	
+	
+	<tr>
+		<th scope="row">Evidence</th>
+		<td><pre><code>&lt;noscript data-next-hide-fouc=&quot;true&quot;&gt;&lt;style&gt;body{display:block}&lt;/style&gt;&lt;/noscript&gt;</code></pre></td>
+	</tr>
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>This is an informational alert and so no changes are required.</p>
+ </td>
+	</tr>
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-10">User Agent Fuzzer</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET http://localhost:3001/_next/static/chunks/webpack.js</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the original response.</p>
+ </td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (242 bytes)</summary>
+				
+				<pre><code>GET http://localhost:3001/_next/static/chunks/webpack.js HTTP/1.1
+host: localhost:3001
+user-agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)
+pragma: no-cache
+cache-control: no-cache
+referer: http://localhost:3001/sitemap.xml
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (340 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 200 OK
+Cache-Control: no-store, must-revalidate
+Accept-Ranges: bytes
+Last-Modified: Sat, 10 May 2025 19:12:54 GMT
+ETag: W/&quot;c9a0-196bb9d5c56&quot;
+Content-Type: application/javascript; charset=UTF-8
+Content-Length: 51616
+Vary: Accept-Encoding
+Date: Sat, 10 May 2025 19:14:49 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+</code></pre>
+				
+				
+			</details> <details class="response-body">
+				<summary>Response body (51616 bytes)</summary>
+				
+				<pre><code>/*
+ * ATTENTION: An &quot;eval-source-map&quot; devtool has been used.
+ * This devtool is neither made for production nor for readable output files.
+ * It uses &quot;eval()&quot; calls to create a separate source file with attached SourceMaps in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with &quot;devtool: false&quot;.
+ * If you are looking for production-ready output files, see mode: &quot;production&quot; (https://webpack.js.org/configuration/mode/).
+ */
+/******/ (() =&gt; { // webpackBootstrap
+/******/ 	&quot;use strict&quot;;
+/******/ 	var __webpack_modules__ = ({});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			if (cachedModule.error !== undefined) throw cachedModule.error;
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			id: moduleId,
+/******/ 			loaded: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		var threw = true;
+/******/ 		try {
+/******/ 			var execOptions = { id: moduleId, module: module, factory: __webpack_modules__[moduleId], require: __webpack_require__ };
+/******/ 			__webpack_require__.i.forEach(function(handler) { handler(execOptions); });
+/******/ 			module = execOptions.module;
+/******/ 			execOptions.factory.call(module.exports, module, module.exports, execOptions.require);
+/******/ 			threw = false;
+/******/ 		} finally {
+/******/ 			if(threw) delete __webpack_module_cache__[moduleId];
+/******/ 		}
+/******/ 	
+/******/ 		// Flag the module as loaded
+/******/ 		module.loaded = true;
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = __webpack_modules__;
+/******/ 	
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = __webpack_module_cache__;
+/******/ 	
+/******/ 	// expose the module execution interceptor
+/******/ 	__webpack_require__.i = [];
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/chunk loaded */
+/******/ 	(() =&gt; {
+/******/ 		var deferred = [];
+/******/ 		__webpack_require__.O = (result, chunkIds, fn, priority) =&gt; {
+/******/ 			if(chunkIds) {
+/******/ 				priority = priority || 0;
+/******/ 				for(var i = deferred.length; i &gt; 0 &amp;&amp; deferred[i - 1][2] &gt; priority; i--) deferred[i] = deferred[i - 1];
+/******/ 				deferred[i] = [chunkIds, fn, priority];
+/******/ 				return;
+/******/ 			}
+/******/ 			var notFulfilled = Infinity;
+/******/ 			for (var i = 0; i &lt; deferred.length; i++) {
+/******/ 				var [chunkIds, fn, priority] = deferred[i];
+/******/ 				var fulfilled = true;
+/******/ 				for (var j = 0; j &lt; chunkIds.length; j++) {
+/******/ 					if ((priority &amp; 1 === 0 || notFulfilled &gt;= priority) &amp;&amp; Object.keys(__webpack_require__.O).every((key) =&gt; (__webpack_require__.O[key](chunkIds[j])))) {
+/******/ 						chunkIds.splice(j--, 1);
+/******/ 					} else {
+/******/ 						fulfilled = false;
+/******/ 						if(priority &lt; notFulfilled) notFulfilled = priority;
+/******/ 					}
+/******/ 				}
+/******/ 				if(fulfilled) {
+/******/ 					deferred.splice(i--, 1)
+/******/ 					var r = fn();
+/******/ 					if (r !== undefined) result = r;
+/******/ 				}
+/******/ 			}
+/******/ 			return result;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() =&gt; {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) =&gt; {
+/******/ 			var getter = module &amp;&amp; module.__esModule ?
+/******/ 				() =&gt; (module[&#39;default&#39;]) :
+/******/ 				() =&gt; (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/create fake namespace object */
+/******/ 	(() =&gt; {
+/******/ 		var getProto = Object.getPrototypeOf ? (obj) =&gt; (Object.getPrototypeOf(obj)) : (obj) =&gt; (obj.__proto__);
+/******/ 		var leafPrototypes;
+/******/ 		// create a fake namespace object
+/******/ 		// mode &amp; 1: value is a module id, require it
+/******/ 		// mode &amp; 2: merge all properties of value into the ns
+/******/ 		// mode &amp; 4: return value when already ns object
+/******/ 		// mode &amp; 16: return value when it&#39;s Promise-like
+/******/ 		// mode &amp; 8|1: behave like require
+/******/ 		__webpack_require__.t = function(value, mode) {
+/******/ 			if(mode &amp; 1) value = this(value);
+/******/ 			if(mode &amp; 8) return value;
+/******/ 			if(typeof value === &#39;object&#39; &amp;&amp; value) {
+/******/ 				if((mode &amp; 4) &amp;&amp; value.__esModule) return value;
+/******/ 				if((mode &amp; 16) &amp;&amp; typeof value.then === &#39;function&#39;) return value;
+/******/ 			}
+/******/ 			var ns = Object.create(null);
+/******/ 			__webpack_require__.r(ns);
+/******/ 			var def = {};
+/******/ 			leafPrototypes = leafPrototypes || [null, getProto({}), getProto([]), getProto(getProto)];
+/******/ 			for(var current = mode &amp; 2 &amp;&amp; value; typeof current == &#39;object&#39; &amp;&amp; !~leafPrototypes.indexOf(current); current = getProto(current)) {
+/******/ 				Object.getOwnPropertyNames(current).forEach((key) =&gt; (def[key] = () =&gt; (value[key])));
+/******/ 			}
+/******/ 			def[&#39;default&#39;] = () =&gt; (value);
+/******/ 			__webpack_require__.d(ns, def);
+/******/ 			return ns;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() =&gt; {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) =&gt; {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) &amp;&amp; !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/ensure chunk */
+/******/ 	(() =&gt; {
+/******/ 		__webpack_require__.f = {};
+/******/ 		// This file contains only the entry chunk.
+/******/ 		// The chunk loading function for additional chunks
+/******/ 		__webpack_require__.e = (chunkId) =&gt; {
+/******/ 			return Promise.all(Object.keys(__webpack_require__.f).reduce((promises, key) =&gt; {
+/******/ 				__webpack_require__.f[key](chunkId, promises);
+/******/ 				return promises;
+/******/ 			}, []));
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/get javascript chunk filename */
+/******/ 	(() =&gt; {
+/******/ 		// This function allow to reference async chunks
+/******/ 		__webpack_require__.u = (chunkId) =&gt; {
+/******/ 			// return url for filenames based on template
+/******/ 			return &quot;static/chunks/&quot; + chunkId + &quot;.js&quot;;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/get javascript update chunk filename */
+/******/ 	(() =&gt; {
+/******/ 		// This function allow to reference all chunks
+/******/ 		__webpack_require__.hu = (chunkId) =&gt; {
+/******/ 			// return url for filenames based on template
+/******/ 			return &quot;static/webpack/&quot; + chunkId + &quot;.&quot; + __webpack_require__.h() + &quot;.hot-update.js&quot;;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/get update manifest filename */
+/******/ 	(() =&gt; {
+/******/ 		__webpack_require__.hmrF = () =&gt; (&quot;static/webpack/&quot; + __webpack_require__.h() + &quot;.webpack.hot-update.json&quot;);
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/getFullHash */
+/******/ 	(() =&gt; {
+/******/ 		__webpack_require__.h = () =&gt; (&quot;e1f8f68c8692aaa5&quot;)
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() =&gt; {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === &#39;object&#39;) return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function(&#39;return this&#39;)();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === &#39;object&#39;) return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() =&gt; {
+/******/ 		__webpack_require__.o = (obj, prop) =&gt; (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/load script */
+/******/ 	(() =&gt; {
+/******/ 		var inProgress = {};
+/******/ 		var dataWebpackPrefix = &quot;_N_E:&quot;;
+/******/ 		// loadScript function to load a script via script tag
+/******/ 		__webpack_require__.l = (url, done, key, chunkId) =&gt; {
+/******/ 			if(inProgress[url]) { inProgress[url].push(done); return; }
+/******/ 			var script, needAttach;
+/******/ 			if(key !== undefined) {
+/******/ 				var scripts = document.getElementsByTagName(&quot;script&quot;);
+/******/ 				for(var i = 0; i &lt; scripts.length; i++) {
+/******/ 					var s = scripts[i];
+/******/ 					if(s.getAttribute(&quot;src&quot;) == url || s.getAttribute(&quot;data-webpack&quot;) == dataWebpackPrefix + key) { script = s; break; }
+/******/ 				}
+/******/ 			}
+/******/ 			if(!script) {
+/******/ 				needAttach = true;
+/******/ 				script = document.createElement(&#39;script&#39;);
+/******/ 		
+/******/ 				script.charset = &#39;utf-8&#39;;
+/******/ 				script.timeout = 120;
+/******/ 				if (__webpack_require__.nc) {
+/******/ 					script.setAttribute(&quot;nonce&quot;, __webpack_require__.nc);
+/******/ 				}
+/******/ 				script.setAttribute(&quot;data-webpack&quot;, dataWebpackPrefix + key);
+/******/ 		
+/******/ 				script.src = __webpack_require__.tu(url);
+/******/ 			}
+/******/ 			inProgress[url] = [done];
+/******/ 			var onScriptComplete = (prev, event) =&gt; {
+/******/ 				// avoid mem leaks in IE.
+/******/ 				script.onerror = script.onload = null;
+/******/ 				clearTimeout(timeout);
+/******/ 				var doneFns = inProgress[url];
+/******/ 				delete inProgress[url];
+/******/ 				script.parentNode &amp;&amp; script.parentNode.removeChild(script);
+/******/ 				doneFns &amp;&amp; doneFns.forEach((fn) =&gt; (fn(event)));
+/******/ 				if(prev) return prev(event);
+/******/ 			}
+/******/ 			var timeout = setTimeout(onScriptComplete.bind(null, undefined, { type: &#39;timeout&#39;, target: script }), 120000);
+/******/ 			script.onerror = onScriptComplete.bind(null, script.onerror);
+/******/ 			script.onload = onScriptComplete.bind(null, script.onload);
+/******/ 			needAttach &amp;&amp; document.head.appendChild(script);
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() =&gt; {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) =&gt; {
+/******/ 			if(typeof Symbol !== &#39;undefined&#39; &amp;&amp; Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: &#39;Module&#39; });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, &#39;__esModule&#39;, { value: true });
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/node module decorator */
+/******/ 	(() =&gt; {
+/******/ 		__webpack_require__.nmd = (module) =&gt; {
+/******/ 			module.paths = [];
+/******/ 			if (!module.children) module.children = [];
+/******/ 			return module;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/trusted types policy */
+/******/ 	(() =&gt; {
+/******/ 		var policy;
+/******/ 		__webpack_require__.tt = () =&gt; {
+/******/ 			// Create Trusted Type policy if Trusted Types are available and the policy doesn&#39;t exist yet.
+/******/ 			if (policy === undefined) {
+/******/ 				policy = {
+/******/ 					createScript: (script) =&gt; (script),
+/******/ 					createScriptURL: (url) =&gt; (url)
+/******/ 				};
+/******/ 				if (typeof trustedTypes !== &quot;undefined&quot; &amp;&amp; trustedTypes.createPolicy) {
+/******/ 					policy = trustedTypes.createPolicy(&quot;nextjs#bundler&quot;, policy);
+/******/ 				}
+/******/ 			}
+/******/ 			return policy;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/trusted types script */
+/******/ 	(() =&gt; {
+/******/ 		__webpack_require__.ts = (script) =&gt; (__webpack_require__.tt().createScript(script));
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/trusted types script url */
+/******/ 	(() =&gt; {
+/******/ 		__webpack_require__.tu = (url) =&gt; (__webpack_require__.tt().createScriptURL(url));
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hot module replacement */
+/******/ 	(() =&gt; {
+/******/ 		var currentModuleData = {};
+/******/ 		var installedModules = __webpack_require__.c;
+/******/ 		
+/******/ 		// module and require creation
+/******/ 		var currentChildModule;
+/******/ 		var currentParents = [];
+/******/ 		
+/******/ 		// status
+/******/ 		var registeredStatusHandlers = [];
+/******/ 		var currentStatus = &quot;idle&quot;;
+/******/ 		
+/******/ 		// while downloading
+/******/ 		var blockingPromises = 0;
+/******/ 		var blockingPromisesWaiting = [];
+/******/ 		
+/******/ 		// The update info
+/******/ 		var currentUpdateApplyHandlers;
+/******/ 		var queuedInvalidatedModules;
+/******/ 		
+/******/ 		__webpack_require__.hmrD = currentModuleData;
+/******/ 		
+/******/ 		__webpack_require__.i.push(function (options) {
+/******/ 			var module = options.module;
+/******/ 			var require = createRequire(options.require, options.id);
+/******/ 			module.hot = createModuleHotObject(options.id, module);
+/******/ 			module.parents = currentParents;
+/******/ 			module.children = [];
+/******/ 			currentParents = [];
+/******/ 			options.require = require;
+/******/ 		});
+/******/ 		
+/******/ 		__webpack_require__.hmrC = {};
+/******/ 		__webpack_require__.hmrI = {};
+/******/ 		
+/******/ 		function createRequire(require, moduleId) {
+/******/ 			var me = installedModules[moduleId];
+/******/ 			if (!me) return require;
+/******/ 			var fn = function (request) {
+/******/ 				if (me.hot.active) {
+/******/ 					if (installedModules[request]) {
+/******/ 						var parents = installedModules[request].parents;
+/******/ 						if (parents.indexOf(moduleId) === -1) {
+/******/ 							parents.push(moduleId);
+/******/ 						}
+/******/ 					} else {
+/******/ 						currentParents = [moduleId];
+/******/ 						currentChildModule = request;
+/******/ 					}
+/******/ 					if (me.children.indexOf(request) === -1) {
+/******/ 						me.children.push(request);
+/******/ 					}
+/******/ 				} else {
+/******/ 					console.warn(
+/******/ 						&quot;[HMR] unexpected require(&quot; +
+/******/ 							request +
+/******/ 							&quot;) from disposed module &quot; +
+/******/ 							moduleId
+/******/ 					);
+/******/ 					currentParents = [];
+/******/ 				}
+/******/ 				return require(request);
+/******/ 			};
+/******/ 			var createPropertyDescriptor = function (name) {
+/******/ 				return {
+/******/ 					configurable: true,
+/******/ 					enumerable: true,
+/******/ 					get: function () {
+/******/ 						return require[name];
+/******/ 					},
+/******/ 					set: function (value) {
+/******/ 						require[name] = value;
+/******/ 					}
+/******/ 				};
+/******/ 			};
+/******/ 			for (var name in require) {
+/******/ 				if (Object.prototype.hasOwnProperty.call(require, name) &amp;&amp; name !== &quot;e&quot;) {
+/******/ 					Object.defineProperty(fn, name, createPropertyDescriptor(name));
+/******/ 				}
+/******/ 			}
+/******/ 			fn.e = function (chunkId, fetchPriority) {
+/******/ 				return trackBlockingPromise(require.e(chunkId, fetchPriority));
+/******/ 			};
+/******/ 			return fn;
+/******/ 		}
+/******/ 		
+/******/ 		function createModuleHotObject(moduleId, me) {
+/******/ 			var _main = currentChildModule !== moduleId;
+/******/ 			var hot = {
+/******/ 				// private stuff
+/******/ 				_acceptedDependencies: {},
+/******/ 				_acceptedErrorHandlers: {},
+/******/ 				_declinedDependencies: {},
+/******/ 				_selfAccepted: false,
+/******/ 				_selfDeclined: false,
+/******/ 				_selfInvalidated: false,
+/******/ 				_disposeHandlers: [],
+/******/ 				_main: _main,
+/******/ 				_requireSelf: function () {
+/******/ 					currentParents = me.parents.slice();
+/******/ 					currentChildModule = _main ? undefined : moduleId;
+/******/ 					__webpack_require__(moduleId);
+/******/ 				},
+/******/ 		
+/******/ 				// Module API
+/******/ 				active: true,
+/******/ 				accept: function (dep, callback, errorHandler) {
+/******/ 					if (dep === undefined) hot._selfAccepted = true;
+/******/ 					else if (typeof dep === &quot;function&quot;) hot._selfAccepted = dep;
+/******/ 					else if (typeof dep === &quot;object&quot; &amp;&amp; dep !== null) {
+/******/ 						for (var i = 0; i &lt; dep.length; i++) {
+/******/ 							hot._acceptedDependencies[dep[i]] = callback || function () {};
+/******/ 							hot._acceptedErrorHandlers[dep[i]] = errorHandler;
+/******/ 						}
+/******/ 					} else {
+/******/ 						hot._acceptedDependencies[dep] = callback || function () {};
+/******/ 						hot._acceptedErrorHandlers[dep] = errorHandler;
+/******/ 					}
+/******/ 				},
+/******/ 				decline: function (dep) {
+/******/ 					if (dep === undefined) hot._selfDeclined = true;
+/******/ 					else if (typeof dep === &quot;object&quot; &amp;&amp; dep !== null)
+/******/ 						for (var i = 0; i &lt; dep.length; i++)
+/******/ 							hot._declinedDependencies[dep[i]] = true;
+/******/ 					else hot._declinedDependencies[dep] = true;
+/******/ 				},
+/******/ 				dispose: function (callback) {
+/******/ 					hot._disposeHandlers.push(callback);
+/******/ 				},
+/******/ 				addDisposeHandler: function (callback) {
+/******/ 					hot._disposeHandlers.push(callback);
+/******/ 				},
+/******/ 				removeDisposeHandler: function (callback) {
+/******/ 					var idx = hot._disposeHandlers.indexOf(callback);
+/******/ 					if (idx &gt;= 0) hot._disposeHandlers.splice(idx, 1);
+/******/ 				},
+/******/ 				invalidate: function () {
+/******/ 					this._selfInvalidated = true;
+/******/ 					switch (currentStatus) {
+/******/ 						case &quot;idle&quot;:
+/******/ 							currentUpdateApplyHandlers = [];
+/******/ 							Object.keys(__webpack_require__.hmrI).forEach(function (key) {
+/******/ 								__webpack_require__.hmrI[key](
+/******/ 									moduleId,
+/******/ 									currentUpdateApplyHandlers
+/******/ 								);
+/******/ 							});
+/******/ 							setStatus(&quot;ready&quot;);
+/******/ 							break;
+/******/ 						case &quot;ready&quot;:
+/******/ 							Object.keys(__webpack_require__.hmrI).forEach(function (key) {
+/******/ 								__webpack_require__.hmrI[key](
+/******/ 									moduleId,
+/******/ 									currentUpdateApplyHandlers
+/******/ 								);
+/******/ 							});
+/******/ 							break;
+/******/ 						case &quot;prepare&quot;:
+/******/ 						case &quot;check&quot;:
+/******/ 						case &quot;dispose&quot;:
+/******/ 						case &quot;apply&quot;:
+/******/ 							(queuedInvalidatedModules = queuedInvalidatedModules || []).push(
+/******/ 								moduleId
+/******/ 							);
+/******/ 							break;
+/******/ 						default:
+/******/ 							// ignore requests in error states
+/******/ 							break;
+/******/ 					}
+/******/ 				},
+/******/ 		
+/******/ 				// Management API
+/******/ 				check: hotCheck,
+/******/ 				apply: hotApply,
+/******/ 				status: function (l) {
+/******/ 					if (!l) return currentStatus;
+/******/ 					registeredStatusHandlers.push(l);
+/******/ 				},
+/******/ 				addStatusHandler: function (l) {
+/******/ 					registeredStatusHandlers.push(l);
+/******/ 				},
+/******/ 				removeStatusHandler: function (l) {
+/******/ 					var idx = registeredStatusHandlers.indexOf(l);
+/******/ 					if (idx &gt;= 0) registeredStatusHandlers.splice(idx, 1);
+/******/ 				},
+/******/ 		
+/******/ 				// inherit from previous dispose call
+/******/ 				data: currentModuleData[moduleId]
+/******/ 			};
+/******/ 			currentChildModule = undefined;
+/******/ 			return hot;
+/******/ 		}
+/******/ 		
+/******/ 		function setStatus(newStatus) {
+/******/ 			currentStatus = newStatus;
+/******/ 			var results = [];
+/******/ 		
+/******/ 			for (var i = 0; i &lt; registeredStatusHandlers.length; i++)
+/******/ 				results[i] = registeredStatusHandlers[i].call(null, newStatus);
+/******/ 		
+/******/ 			return Promise.all(results).then(function () {});
+/******/ 		}
+/******/ 		
+/******/ 		function unblock() {
+/******/ 			if (--blockingPromises === 0) {
+/******/ 				setStatus(&quot;ready&quot;).then(function () {
+/******/ 					if (blockingPromises === 0) {
+/******/ 						var list = blockingPromisesWaiting;
+/******/ 						blockingPromisesWaiting = [];
+/******/ 						for (var i = 0; i &lt; list.length; i++) {
+/******/ 							list[i]();
+/******/ 						}
+/******/ 					}
+/******/ 				});
+/******/ 			}
+/******/ 		}
+/******/ 		
+/******/ 		function trackBlockingPromise(promise) {
+/******/ 			switch (currentStatus) {
+/******/ 				case &quot;ready&quot;:
+/******/ 					setStatus(&quot;prepare&quot;);
+/******/ 				/* fallthrough */
+/******/ 				case &quot;prepare&quot;:
+/******/ 					blockingPromises++;
+/******/ 					promise.then(unblock, unblock);
+/******/ 					return promise;
+/******/ 				default:
+/******/ 					return promise;
+/******/ 			}
+/******/ 		}
+/******/ 		
+/******/ 		function waitForBlockingPromises(fn) {
+/******/ 			if (blockingPromises === 0) return fn();
+/******/ 			return new Promise(function (resolve) {
+/******/ 				blockingPromisesWaiting.push(function () {
+/******/ 					resolve(fn());
+/******/ 				});
+/******/ 			});
+/******/ 		}
+/******/ 		
+/******/ 		function hotCheck(applyOnUpdate) {
+/******/ 			if (currentStatus !== &quot;idle&quot;) {
+/******/ 				throw new Error(&quot;check() is only allowed in idle status&quot;);
+/******/ 			}
+/******/ 			return setStatus(&quot;check&quot;)
+/******/ 				.then(__webpack_require__.hmrM)
+/******/ 				.then(function (update) {
+/******/ 					if (!update) {
+/******/ 						return setStatus(applyInvalidatedModules() ? &quot;ready&quot; : &quot;idle&quot;).then(
+/******/ 							function () {
+/******/ 								return null;
+/******/ 							}
+/******/ 						);
+/******/ 					}
+/******/ 		
+/******/ 					return setStatus(&quot;prepare&quot;).then(function () {
+/******/ 						var updatedModules = [];
+/******/ 						currentUpdateApplyHandlers = [];
+/******/ 		
+/******/ 						return Promise.all(
+/******/ 							Object.keys(__webpack_require__.hmrC).reduce(function (
+/******/ 								promises,
+/******/ 								key
+/******/ 							) {
+/******/ 								__webpack_require__.hmrC[key](
+/******/ 									update.c,
+/******/ 									update.r,
+/******/ 									update.m,
+/******/ 									promises,
+/******/ 									currentUpdateApplyHandlers,
+/******/ 									updatedModules
+/******/ 								);
+/******/ 								return promises;
+/******/ 							}, [])
+/******/ 						).then(function () {
+/******/ 							return waitForBlockingPromises(function () {
+/******/ 								if (applyOnUpdate) {
+/******/ 									return internalApply(applyOnUpdate);
+/******/ 								}
+/******/ 								return setStatus(&quot;ready&quot;).then(function () {
+/******/ 									return updatedModules;
+/******/ 								});
+/******/ 							});
+/******/ 						});
+/******/ 					});
+/******/ 				});
+/******/ 		}
+/******/ 		
+/******/ 		function hotApply(options) {
+/******/ 			if (currentStatus !== &quot;ready&quot;) {
+/******/ 				return Promise.resolve().then(function () {
+/******/ 					throw new Error(
+/******/ 						&quot;apply() is only allowed in ready status (state: &quot; +
+/******/ 							currentStatus +
+/******/ 							&quot;)&quot;
+/******/ 					);
+/******/ 				});
+/******/ 			}
+/******/ 			return internalApply(options);
+/******/ 		}
+/******/ 		
+/******/ 		function internalApply(options) {
+/******/ 			options = options || {};
+/******/ 		
+/******/ 			applyInvalidatedModules();
+/******/ 		
+/******/ 			var results = currentUpdateApplyHandlers.map(function (handler) {
+/******/ 				return handler(options);
+/******/ 			});
+/******/ 			currentUpdateApplyHandlers = undefined;
+/******/ 		
+/******/ 			var errors = results
+/******/ 				.map(function (r) {
+/******/ 					return r.error;
+/******/ 				})
+/******/ 				.filter(Boolean);
+/******/ 		
+/******/ 			if (errors.length &gt; 0) {
+/******/ 				return setStatus(&quot;abort&quot;).then(function () {
+/******/ 					throw errors[0];
+/******/ 				});
+/******/ 			}
+/******/ 		
+/******/ 			// Now in &quot;dispose&quot; phase
+/******/ 			var disposePromise = setStatus(&quot;dispose&quot;);
+/******/ 		
+/******/ 			results.forEach(function (result) {
+/******/ 				if (result.dispose) result.dispose();
+/******/ 			});
+/******/ 		
+/******/ 			// Now in &quot;apply&quot; phase
+/******/ 			var applyPromise = setStatus(&quot;apply&quot;);
+/******/ 		
+/******/ 			var error;
+/******/ 			var reportError = function (err) {
+/******/ 				if (!error) error = err;
+/******/ 			};
+/******/ 		
+/******/ 			var outdatedModules = [];
+/******/ 			results.forEach(function (result) {
+/******/ 				if (result.apply) {
+/******/ 					var modules = result.apply(reportError);
+/******/ 					if (modules) {
+/******/ 						for (var i = 0; i &lt; modules.length; i++) {
+/******/ 							outdatedModules.push(modules[i]);
+/******/ 						}
+/******/ 					}
+/******/ 				}
+/******/ 			});
+/******/ 		
+/******/ 			return Promise.all([disposePromise, applyPromise]).then(function () {
+/******/ 				// handle errors in accept handlers and self accepted module load
+/******/ 				if (error) {
+/******/ 					return setStatus(&quot;fail&quot;).then(function () {
+/******/ 						throw error;
+/******/ 					});
+/******/ 				}
+/******/ 		
+/******/ 				if (queuedInvalidatedModules) {
+/******/ 					return internalApply(options).then(function (list) {
+/******/ 						outdatedModules.forEach(function (moduleId) {
+/******/ 							if (list.indexOf(moduleId) &lt; 0) list.push(moduleId);
+/******/ 						});
+/******/ 						return list;
+/******/ 					});
+/******/ 				}
+/******/ 		
+/******/ 				return setStatus(&quot;idle&quot;).then(function () {
+/******/ 					return outdatedModules;
+/******/ 				});
+/******/ 			});
+/******/ 		}
+/******/ 		
+/******/ 		function applyInvalidatedModules() {
+/******/ 			if (queuedInvalidatedModules) {
+/******/ 				if (!currentUpdateApplyHandlers) currentUpdateApplyHandlers = [];
+/******/ 				Object.keys(__webpack_require__.hmrI).forEach(function (key) {
+/******/ 					queuedInvalidatedModules.forEach(function (moduleId) {
+/******/ 						__webpack_require__.hmrI[key](
+/******/ 							moduleId,
+/******/ 							currentUpdateApplyHandlers
+/******/ 						);
+/******/ 					});
+/******/ 				});
+/******/ 				queuedInvalidatedModules = undefined;
+/******/ 				return true;
+/******/ 			}
+/******/ 		}
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() =&gt; {
+/******/ 		__webpack_require__.p = &quot;/_next/&quot;;
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/react refresh */
+/******/ 	(() =&gt; {
+/******/ 		if (__webpack_require__.i) {
+/******/ 		__webpack_require__.i.push((options) =&gt; {
+/******/ 			const originalFactory = options.factory;
+/******/ 			options.factory = (moduleObject, moduleExports, webpackRequire) =&gt; {
+/******/ 				const hasRefresh = typeof self !== &quot;undefined&quot; &amp;&amp; !!self.$RefreshInterceptModuleExecution$;
+/******/ 				const cleanup = hasRefresh ? self.$RefreshInterceptModuleExecution$(moduleObject.id) : () =&gt; {};
+/******/ 				try {
+/******/ 					originalFactory.call(this, moduleObject, moduleExports, webpackRequire);
+/******/ 				} finally {
+/******/ 					cleanup();
+/******/ 				}
+/******/ 			}
+/******/ 		})
+/******/ 		}
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/compat */
+/******/ 	
+/******/ 	
+/******/ 	// noop fns to prevent runtime errors during initialization
+/******/ 	if (typeof self !== &quot;undefined&quot;) {
+/******/ 		self.$RefreshReg$ = function () {};
+/******/ 		self.$RefreshSig$ = function () {
+/******/ 			return function (type) {
+/******/ 				return type;
+/******/ 			};
+/******/ 		};
+/******/ 	}
+/******/ 	
+/******/ 	/* webpack/runtime/jsonp chunk loading */
+/******/ 	(() =&gt; {
+/******/ 		// no baseURI
+/******/ 		
+/******/ 		// object to store loaded and loading chunks
+/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
+/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
+/******/ 		var installedChunks = __webpack_require__.hmrS_jsonp = __webpack_require__.hmrS_jsonp || {
+/******/ 			&quot;webpack&quot;: 0
+/******/ 		};
+/******/ 		
+/******/ 		__webpack_require__.f.j = (chunkId, promises) =&gt; {
+/******/ 				// JSONP chunk loading for javascript
+/******/ 				var installedChunkData = __webpack_require__.o(installedChunks, chunkId) ? installedChunks[chunkId] : undefined;
+/******/ 				if(installedChunkData !== 0) { // 0 means &quot;already installed&quot;.
+/******/ 		
+/******/ 					// a Promise means &quot;currently loading&quot;.
+/******/ 					if(installedChunkData) {
+/******/ 						promises.push(installedChunkData[2]);
+/******/ 					} else {
+/******/ 						if(&quot;webpack&quot; != chunkId) {
+/******/ 							// setup Promise in chunk cache
+/******/ 							var promise = new Promise((resolve, reject) =&gt; (installedChunkData = installedChunks[chunkId] = [resolve, reject]));
+/******/ 							promises.push(installedChunkData[2] = promise);
+/******/ 		
+/******/ 							// start chunk loading
+/******/ 							var url = __webpack_require__.p + __webpack_require__.u(chunkId);
+/******/ 							// create error before stack unwound to get useful stacktrace later
+/******/ 							var error = new Error();
+/******/ 							var loadingEnded = (event) =&gt; {
+/******/ 								if(__webpack_require__.o(installedChunks, chunkId)) {
+/******/ 									installedChunkData = installedChunks[chunkId];
+/******/ 									if(installedChunkData !== 0) installedChunks[chunkId] = undefined;
+/******/ 									if(installedChunkData) {
+/******/ 										var errorType = event &amp;&amp; (event.type === &#39;load&#39; ? &#39;missing&#39; : event.type);
+/******/ 										var realSrc = event &amp;&amp; event.target &amp;&amp; event.target.src;
+/******/ 										error.message = &#39;Loading chunk &#39; + chunkId + &#39; failed.\n(&#39; + errorType + &#39;: &#39; + realSrc + &#39;)&#39;;
+/******/ 										error.name = &#39;ChunkLoadError&#39;;
+/******/ 										error.type = errorType;
+/******/ 										error.request = realSrc;
+/******/ 										installedChunkData[1](error);
+/******/ 									}
+/******/ 								}
+/******/ 							};
+/******/ 							__webpack_require__.l(url, loadingEnded, &quot;chunk-&quot; + chunkId, chunkId);
+/******/ 						} else installedChunks[chunkId] = 0;
+/******/ 					}
+/******/ 				}
+/******/ 		};
+/******/ 		
+/******/ 		// no prefetching
+/******/ 		
+/******/ 		// no preloaded
+/******/ 		
+/******/ 		var currentUpdatedModulesList;
+/******/ 		var waitingUpdateResolves = {};
+/******/ 		function loadUpdateChunk(chunkId, updatedModulesList) {
+/******/ 			currentUpdatedModulesList = updatedModulesList;
+/******/ 			return new Promise((resolve, reject) =&gt; {
+/******/ 				waitingUpdateResolves[chunkId] = resolve;
+/******/ 				// start update chunk loading
+/******/ 				var url = __webpack_require__.p + __webpack_require__.hu(chunkId);
+/******/ 				// create error before stack unwound to get useful stacktrace later
+/******/ 				var error = new Error();
+/******/ 				var loadingEnded = (event) =&gt; {
+/******/ 					if(waitingUpdateResolves[chunkId]) {
+/******/ 						waitingUpdateResolves[chunkId] = undefined
+/******/ 						var errorType = event &amp;&amp; (event.type === &#39;load&#39; ? &#39;missing&#39; : event.type);
+/******/ 						var realSrc = event &amp;&amp; event.target &amp;&amp; event.target.src;
+/******/ 						error.message = &#39;Loading hot update chunk &#39; + chunkId + &#39; failed.\n(&#39; + errorType + &#39;: &#39; + realSrc + &#39;)&#39;;
+/******/ 						error.name = &#39;ChunkLoadError&#39;;
+/******/ 						error.type = errorType;
+/******/ 						error.request = realSrc;
+/******/ 						reject(error);
+/******/ 					}
+/******/ 				};
+/******/ 				__webpack_require__.l(url, loadingEnded);
+/******/ 			});
+/******/ 		}
+/******/ 		
+/******/ 		self[&quot;webpackHotUpdate_N_E&quot;] = (chunkId, moreModules, runtime) =&gt; {
+/******/ 			for(var moduleId in moreModules) {
+/******/ 				if(__webpack_require__.o(moreModules, moduleId)) {
+/******/ 					currentUpdate[moduleId] = moreModules[moduleId];
+/******/ 					if(currentUpdatedModulesList) currentUpdatedModulesList.push(moduleId);
+/******/ 				}
+/******/ 			}
+/******/ 			if(runtime) currentUpdateRuntime.push(runtime);
+/******/ 			if(waitingUpdateResolves[chunkId]) {
+/******/ 				waitingUpdateResolves[chunkId]();
+/******/ 				waitingUpdateResolves[chunkId] = undefined;
+/******/ 			}
+/******/ 		};
+/******/ 		
+/******/ 		var currentUpdateChunks;
+/******/ 		var currentUpdate;
+/******/ 		var currentUpdateRemovedChunks;
+/******/ 		var currentUpdateRuntime;
+/******/ 		function applyHandler(options) {
+/******/ 			if (__webpack_require__.f) delete __webpack_require__.f.jsonpHmr;
+/******/ 			currentUpdateChunks = undefined;
+/******/ 			function getAffectedModuleEffects(updateModuleId) {
+/******/ 				var outdatedModules = [updateModuleId];
+/******/ 				var outdatedDependencies = {};
+/******/ 		
+/******/ 				var queue = outdatedModules.map(function (id) {
+/******/ 					return {
+/******/ 						chain: [id],
+/******/ 						id: id
+/******/ 					};
+/******/ 				});
+/******/ 				while (queue.length &gt; 0) {
+/******/ 					var queueItem = queue.pop();
+/******/ 					var moduleId = queueItem.id;
+/******/ 					var chain = queueItem.chain;
+/******/ 					var module = __webpack_require__.c[moduleId];
+/******/ 					if (
+/******/ 						!module ||
+/******/ 						(module.hot._selfAccepted &amp;&amp; !module.hot._selfInvalidated)
+/******/ 					)
+/******/ 						continue;
+/******/ 					if (module.hot._selfDeclined) {
+/******/ 						return {
+/******/ 							type: &quot;self-declined&quot;,
+/******/ 							chain: chain,
+/******/ 							moduleId: moduleId
+/******/ 						};
+/******/ 					}
+/******/ 					if (module.hot._main) {
+/******/ 						return {
+/******/ 							type: &quot;unaccepted&quot;,
+/******/ 							chain: chain,
+/******/ 							moduleId: moduleId
+/******/ 						};
+/******/ 					}
+/******/ 					for (var i = 0; i &lt; module.parents.length; i++) {
+/******/ 						var parentId = module.parents[i];
+/******/ 						var parent = __webpack_require__.c[parentId];
+/******/ 						if (!parent) continue;
+/******/ 						if (parent.hot._declinedDependencies[moduleId]) {
+/******/ 							return {
+/******/ 								type: &quot;declined&quot;,
+/******/ 								chain: chain.concat([parentId]),
+/******/ 								moduleId: moduleId,
+/******/ 								parentId: parentId
+/******/ 							};
+/******/ 						}
+/******/ 						if (outdatedModules.indexOf(parentId) !== -1) continue;
+/******/ 						if (parent.hot._acceptedDependencies[moduleId]) {
+/******/ 							if (!outdatedDependencies[parentId])
+/******/ 								outdatedDependencies[parentId] = [];
+/******/ 							addAllToSet(outdatedDependencies[parentId], [moduleId]);
+/******/ 							continue;
+/******/ 						}
+/******/ 						delete outdatedDependencies[parentId];
+/******/ 						outdatedModules.push(parentId);
+/******/ 						queue.push({
+/******/ 							chain: chain.concat([parentId]),
+/******/ 							id: parentId
+/******/ 						});
+/******/ 					}
+/******/ 				}
+/******/ 		
+/******/ 				return {
+/******/ 					type: &quot;accepted&quot;,
+/******/ 					moduleId: updateModuleId,
+/******/ 					outdatedModules: outdatedModules,
+/******/ 					outdatedDependencies: outdatedDependencies
+/******/ 				};
+/******/ 			}
+/******/ 		
+/******/ 			function addAllToSet(a, b) {
+/******/ 				for (var i = 0; i &lt; b.length; i++) {
+/******/ 					var item = b[i];
+/******/ 					if (a.indexOf(item) === -1) a.push(item);
+/******/ 				}
+/******/ 			}
+/******/ 		
+/******/ 			// at begin all updates modules are outdated
+/******/ 			// the &quot;outdated&quot; status can propagate to parents if they don&#39;t accept the children
+/******/ 			var outdatedDependencies = {};
+/******/ 			var outdatedModules = [];
+/******/ 			var appliedUpdate = {};
+/******/ 		
+/******/ 			var warnUnexpectedRequire = function warnUnexpectedRequire(module) {
+/******/ 				console.warn(
+/******/ 					&quot;[HMR] unexpected require(&quot; + module.id + &quot;) to disposed module&quot;
+/******/ 				);
+/******/ 			};
+/******/ 		
+/******/ 			for (var moduleId in currentUpdate) {
+/******/ 				if (__webpack_require__.o(currentUpdate, moduleId)) {
+/******/ 					var newModuleFactory = currentUpdate[moduleId];
+/******/ 					/** @type {TODO} */
+/******/ 					var result = newModuleFactory
+/******/ 						? getAffectedModuleEffects(moduleId)
+/******/ 						: {
+/******/ 								type: &quot;disposed&quot;,
+/******/ 								moduleId: moduleId
+/******/ 							};
+/******/ 					/** @type {Error|false} */
+/******/ 					var abortError = false;
+/******/ 					var doApply = false;
+/******/ 					var doDispose = false;
+/******/ 					var chainInfo = &quot;&quot;;
+/******/ 					if (result.chain) {
+/******/ 						chainInfo = &quot;\nUpdate propagation: &quot; + result.chain.join(&quot; -&gt; &quot;);
+/******/ 					}
+/******/ 					switch (result.type) {
+/******/ 						case &quot;self-declined&quot;:
+/******/ 							if (options.onDeclined) options.onDeclined(result);
+/******/ 							if (!options.ignoreDeclined)
+/******/ 								abortError = new Error(
+/******/ 									&quot;Aborted because of self decline: &quot; +
+/******/ 										result.moduleId +
+/******/ 										chainInfo
+/******/ 								);
+/******/ 							break;
+/******/ 						case &quot;declined&quot;:
+/******/ 							if (options.onDeclined) options.onDeclined(result);
+/******/ 							if (!options.ignoreDeclined)
+/******/ 								abortError = new Error(
+/******/ 									&quot;Aborted because of declined dependency: &quot; +
+/******/ 										result.moduleId +
+/******/ 										&quot; in &quot; +
+/******/ 										result.parentId +
+/******/ 										chainInfo
+/******/ 								);
+/******/ 							break;
+/******/ 						case &quot;unaccepted&quot;:
+/******/ 							if (options.onUnaccepted) options.onUnaccepted(result);
+/******/ 							if (!options.ignoreUnaccepted)
+/******/ 								abortError = new Error(
+/******/ 									&quot;Aborted because &quot; + moduleId + &quot; is not accepted&quot; + chainInfo
+/******/ 								);
+/******/ 							break;
+/******/ 						case &quot;accepted&quot;:
+/******/ 							if (options.onAccepted) options.onAccepted(result);
+/******/ 							doApply = true;
+/******/ 							break;
+/******/ 						case &quot;disposed&quot;:
+/******/ 							if (options.onDisposed) options.onDisposed(result);
+/******/ 							doDispose = true;
+/******/ 							break;
+/******/ 						default:
+/******/ 							throw new Error(&quot;Unexception type &quot; + result.type);
+/******/ 					}
+/******/ 					if (abortError) {
+/******/ 						return {
+/******/ 							error: abortError
+/******/ 						};
+/******/ 					}
+/******/ 					if (doApply) {
+/******/ 						appliedUpdate[moduleId] = newModuleFactory;
+/******/ 						addAllToSet(outdatedModules, result.outdatedModules);
+/******/ 						for (moduleId in result.outdatedDependencies) {
+/******/ 							if (__webpack_require__.o(result.outdatedDependencies, moduleId)) {
+/******/ 								if (!outdatedDependencies[moduleId])
+/******/ 									outdatedDependencies[moduleId] = [];
+/******/ 								addAllToSet(
+/******/ 									outdatedDependencies[moduleId],
+/******/ 									result.outdatedDependencies[moduleId]
+/******/ 								);
+/******/ 							}
+/******/ 						}
+/******/ 					}
+/******/ 					if (doDispose) {
+/******/ 						addAllToSet(outdatedModules, [result.moduleId]);
+/******/ 						appliedUpdate[moduleId] = warnUnexpectedRequire;
+/******/ 					}
+/******/ 				}
+/******/ 			}
+/******/ 			currentUpdate = undefined;
+/******/ 		
+/******/ 			// Store self accepted outdated modules to require them later by the module system
+/******/ 			var outdatedSelfAcceptedModules = [];
+/******/ 			for (var j = 0; j &lt; outdatedModules.length; j++) {
+/******/ 				var outdatedModuleId = outdatedModules[j];
+/******/ 				var module = __webpack_require__.c[outdatedModuleId];
+/******/ 				if (
+/******/ 					module &amp;&amp;
+/******/ 					(module.hot._selfAccepted || module.hot._main) &amp;&amp;
+/******/ 					// removed self-accepted modules should not be required
+/******/ 					appliedUpdate[outdatedModuleId] !== warnUnexpectedRequire &amp;&amp;
+/******/ 					// when called invalidate self-accepting is not possible
+/******/ 					!module.hot._selfInvalidated
+/******/ 				) {
+/******/ 					outdatedSelfAcceptedModules.push({
+/******/ 						module: outdatedModuleId,
+/******/ 						require: module.hot._requireSelf,
+/******/ 						errorHandler: module.hot._selfAccepted
+/******/ 					});
+/******/ 				}
+/******/ 			}
+/******/ 		
+/******/ 			var moduleOutdatedDependencies;
+/******/ 		
+/******/ 			return {
+/******/ 				dispose: function () {
+/******/ 					currentUpdateRemovedChunks.forEach(function (chunkId) {
+/******/ 						delete installedChunks[chunkId];
+/******/ 					});
+/******/ 					currentUpdateRemovedChunks = undefined;
+/******/ 		
+/******/ 					var idx;
+/******/ 					var queue = outdatedModules.slice();
+/******/ 					while (queue.length &gt; 0) {
+/******/ 						var moduleId = queue.pop();
+/******/ 						var module = __webpack_require__.c[moduleId];
+/******/ 						if (!module) continue;
+/******/ 		
+/******/ 						var data = {};
+/******/ 		
+/******/ 						// Call dispose handlers
+/******/ 						var disposeHandlers = module.hot._disposeHandlers;
+/******/ 						for (j = 0; j &lt; disposeHandlers.length; j++) {
+/******/ 							disposeHandlers[j].call(null, data);
+/******/ 						}
+/******/ 						__webpack_require__.hmrD[moduleId] = data;
+/******/ 		
+/******/ 						// disable module (this disables requires from this module)
+/******/ 						module.hot.active = false;
+/******/ 		
+/******/ 						// remove module from cache
+/******/ 						delete __webpack_require__.c[moduleId];
+/******/ 		
+/******/ 						// when disposing there is no need to call dispose handler
+/******/ 						delete outdatedDependencies[moduleId];
+/******/ 		
+/******/ 						// remove &quot;parents&quot; references from all children
+/******/ 						for (j = 0; j &lt; module.children.length; j++) {
+/******/ 							var child = __webpack_require__.c[module.children[j]];
+/******/ 							if (!child) continue;
+/******/ 							idx = child.parents.indexOf(moduleId);
+/******/ 							if (idx &gt;= 0) {
+/******/ 								child.parents.splice(idx, 1);
+/******/ 							}
+/******/ 						}
+/******/ 					}
+/******/ 		
+/******/ 					// remove outdated dependency from module children
+/******/ 					var dependency;
+/******/ 					for (var outdatedModuleId in outdatedDependencies) {
+/******/ 						if (__webpack_require__.o(outdatedDependencies, outdatedModuleId)) {
+/******/ 							module = __webpack_require__.c[outdatedModuleId];
+/******/ 							if (module) {
+/******/ 								moduleOutdatedDependencies =
+/******/ 									outdatedDependencies[outdatedModuleId];
+/******/ 								for (j = 0; j &lt; moduleOutdatedDependencies.length; j++) {
+/******/ 									dependency = moduleOutdatedDependencies[j];
+/******/ 									idx = module.children.indexOf(dependency);
+/******/ 									if (idx &gt;= 0) module.children.splice(idx, 1);
+/******/ 								}
+/******/ 							}
+/******/ 						}
+/******/ 					}
+/******/ 				},
+/******/ 				apply: function (reportError) {
+/******/ 					// insert new code
+/******/ 					for (var updateModuleId in appliedUpdate) {
+/******/ 						if (__webpack_require__.o(appliedUpdate, updateModuleId)) {
+/******/ 							__webpack_require__.m[updateModuleId] = appliedUpdate[updateModuleId];
+/******/ 						}
+/******/ 					}
+/******/ 		
+/******/ 					// run new runtime modules
+/******/ 					for (var i = 0; i &lt; currentUpdateRuntime.length; i++) {
+/******/ 						currentUpdateRuntime[i](__webpack_require__);
+/******/ 					}
+/******/ 		
+/******/ 					// call accept handlers
+/******/ 					for (var outdatedModuleId in outdatedDependencies) {
+/******/ 						if (__webpack_require__.o(outdatedDependencies, outdatedModuleId)) {
+/******/ 							var module = __webpack_require__.c[outdatedModuleId];
+/******/ 							if (module) {
+/******/ 								moduleOutdatedDependencies =
+/******/ 									outdatedDependencies[outdatedModuleId];
+/******/ 								var callbacks = [];
+/******/ 								var errorHandlers = [];
+/******/ 								var dependenciesForCallbacks = [];
+/******/ 								for (var j = 0; j &lt; moduleOutdatedDependencies.length; j++) {
+/******/ 									var dependency = moduleOutdatedDependencies[j];
+/******/ 									var acceptCallback =
+/******/ 										module.hot._acceptedDependencies[dependency];
+/******/ 									var errorHandler =
+/******/ 										module.hot._acceptedErrorHandlers[dependency];
+/******/ 									if (acceptCallback) {
+/******/ 										if (callbacks.indexOf(acceptCallback) !== -1) continue;
+/******/ 										callbacks.push(acceptCallback);
+/******/ 										errorHandlers.push(errorHandler);
+/******/ 										dependenciesForCallbacks.push(dependency);
+/******/ 									}
+/******/ 								}
+/******/ 								for (var k = 0; k &lt; callbacks.length; k++) {
+/******/ 									try {
+/******/ 										callbacks[k].call(null, moduleOutdatedDependencies);
+/******/ 									} catch (err) {
+/******/ 										if (typeof errorHandlers[k] === &quot;function&quot;) {
+/******/ 											try {
+/******/ 												errorHandlers[k](err, {
+/******/ 													moduleId: outdatedModuleId,
+/******/ 													dependencyId: dependenciesForCallbacks[k]
+/******/ 												});
+/******/ 											} catch (err2) {
+/******/ 												if (options.onErrored) {
+/******/ 													options.onErrored({
+/******/ 														type: &quot;accept-error-handler-errored&quot;,
+/******/ 														moduleId: outdatedModuleId,
+/******/ 														dependencyId: dependenciesForCallbacks[k],
+/******/ 														error: err2,
+/******/ 														originalError: err
+/******/ 													});
+/******/ 												}
+/******/ 												if (!options.ignoreErrored) {
+/******/ 													reportError(err2);
+/******/ 													reportError(err);
+/******/ 												}
+/******/ 											}
+/******/ 										} else {
+/******/ 											if (options.onErrored) {
+/******/ 												options.onErrored({
+/******/ 													type: &quot;accept-errored&quot;,
+/******/ 													moduleId: outdatedModuleId,
+/******/ 													dependencyId: dependenciesForCallbacks[k],
+/******/ 													error: err
+/******/ 												});
+/******/ 											}
+/******/ 											if (!options.ignoreErrored) {
+/******/ 												reportError(err);
+/******/ 											}
+/******/ 										}
+/******/ 									}
+/******/ 								}
+/******/ 							}
+/******/ 						}
+/******/ 					}
+/******/ 		
+/******/ 					// Load self accepted modules
+/******/ 					for (var o = 0; o &lt; outdatedSelfAcceptedModules.length; o++) {
+/******/ 						var item = outdatedSelfAcceptedModules[o];
+/******/ 						var moduleId = item.module;
+/******/ 						try {
+/******/ 							item.require(moduleId);
+/******/ 						} catch (err) {
+/******/ 							if (typeof item.errorHandler === &quot;function&quot;) {
+/******/ 								try {
+/******/ 									item.errorHandler(err, {
+/******/ 										moduleId: moduleId,
+/******/ 										module: __webpack_require__.c[moduleId]
+/******/ 									});
+/******/ 								} catch (err1) {
+/******/ 									if (options.onErrored) {
+/******/ 										options.onErrored({
+/******/ 											type: &quot;self-accept-error-handler-errored&quot;,
+/******/ 											moduleId: moduleId,
+/******/ 											error: err1,
+/******/ 											originalError: err
+/******/ 										});
+/******/ 									}
+/******/ 									if (!options.ignoreErrored) {
+/******/ 										reportError(err1);
+/******/ 										reportError(err);
+/******/ 									}
+/******/ 								}
+/******/ 							} else {
+/******/ 								if (options.onErrored) {
+/******/ 									options.onErrored({
+/******/ 										type: &quot;self-accept-errored&quot;,
+/******/ 										moduleId: moduleId,
+/******/ 										error: err
+/******/ 									});
+/******/ 								}
+/******/ 								if (!options.ignoreErrored) {
+/******/ 									reportError(err);
+/******/ 								}
+/******/ 							}
+/******/ 						}
+/******/ 					}
+/******/ 		
+/******/ 					return outdatedModules;
+/******/ 				}
+/******/ 			};
+/******/ 		}
+/******/ 		__webpack_require__.hmrI.jsonp = function (moduleId, applyHandlers) {
+/******/ 			if (!currentUpdate) {
+/******/ 				currentUpdate = {};
+/******/ 				currentUpdateRuntime = [];
+/******/ 				currentUpdateRemovedChunks = [];
+/******/ 				applyHandlers.push(applyHandler);
+/******/ 			}
+/******/ 			if (!__webpack_require__.o(currentUpdate, moduleId)) {
+/******/ 				currentUpdate[moduleId] = __webpack_require__.m[moduleId];
+/******/ 			}
+/******/ 		};
+/******/ 		__webpack_require__.hmrC.jsonp = function (
+/******/ 			chunkIds,
+/******/ 			removedChunks,
+/******/ 			removedModules,
+/******/ 			promises,
+/******/ 			applyHandlers,
+/******/ 			updatedModulesList
+/******/ 		) {
+/******/ 			applyHandlers.push(applyHandler);
+/******/ 			currentUpdateChunks = {};
+/******/ 			currentUpdateRemovedChunks = removedChunks;
+/******/ 			currentUpdate = removedModules.reduce(function (obj, key) {
+/******/ 				obj[key] = false;
+/******/ 				return obj;
+/******/ 			}, {});
+/******/ 			currentUpdateRuntime = [];
+/******/ 			chunkIds.forEach(function (chunkId) {
+/******/ 				if (
+/******/ 					__webpack_require__.o(installedChunks, chunkId) &amp;&amp;
+/******/ 					installedChunks[chunkId] !== undefined
+/******/ 				) {
+/******/ 					promises.push(loadUpdateChunk(chunkId, updatedModulesList));
+/******/ 					currentUpdateChunks[chunkId] = true;
+/******/ 				} else {
+/******/ 					currentUpdateChunks[chunkId] = false;
+/******/ 				}
+/******/ 			});
+/******/ 			if (__webpack_require__.f) {
+/******/ 				__webpack_require__.f.jsonpHmr = function (chunkId, promises) {
+/******/ 					if (
+/******/ 						currentUpdateChunks &amp;&amp;
+/******/ 						__webpack_require__.o(currentUpdateChunks, chunkId) &amp;&amp;
+/******/ 						!currentUpdateChunks[chunkId]
+/******/ 					) {
+/******/ 						promises.push(loadUpdateChunk(chunkId));
+/******/ 						currentUpdateChunks[chunkId] = true;
+/******/ 					}
+/******/ 				};
+/******/ 			}
+/******/ 		};
+/******/ 		
+/******/ 		__webpack_require__.hmrM = () =&gt; {
+/******/ 			if (typeof fetch === &quot;undefined&quot;) throw new Error(&quot;No browser support: need fetch API&quot;);
+/******/ 			return fetch(__webpack_require__.p + __webpack_require__.hmrF()).then((response) =&gt; {
+/******/ 				if(response.status === 404) return; // no update available
+/******/ 				if(!response.ok) throw new Error(&quot;Failed to fetch update manifest &quot; + response.statusText);
+/******/ 				return response.json();
+/******/ 			});
+/******/ 		};
+/******/ 		
+/******/ 		__webpack_require__.O.j = (chunkId) =&gt; (installedChunks[chunkId] === 0);
+/******/ 		
+/******/ 		// install a JSONP callback for chunk loading
+/******/ 		var webpackJsonpCallback = (parentChunkLoadingFunction, data) =&gt; {
+/******/ 			var [chunkIds, moreModules, runtime] = data;
+/******/ 			// add &quot;moreModules&quot; to the modules object,
+/******/ 			// then flag all &quot;chunkIds&quot; as loaded and fire callback
+/******/ 			var moduleId, chunkId, i = 0;
+/******/ 			if(chunkIds.some((id) =&gt; (installedChunks[id] !== 0))) {
+/******/ 				for(moduleId in moreModules) {
+/******/ 					if(__webpack_require__.o(moreModules, moduleId)) {
+/******/ 						__webpack_require__.m[moduleId] = moreModules[moduleId];
+/******/ 					}
+/******/ 				}
+/******/ 				if(runtime) var result = runtime(__webpack_require__);
+/******/ 			}
+/******/ 			if(parentChunkLoadingFunction) parentChunkLoadingFunction(data);
+/******/ 			for(;i &lt; chunkIds.length; i++) {
+/******/ 				chunkId = chunkIds[i];
+/******/ 				if(__webpack_require__.o(installedChunks, chunkId) &amp;&amp; installedChunks[chunkId]) {
+/******/ 					installedChunks[chunkId][0]();
+/******/ 				}
+/******/ 				installedChunks[chunkId] = 0;
+/******/ 			}
+/******/ 			return __webpack_require__.O(result);
+/******/ 		}
+/******/ 		
+/******/ 		var chunkLoadingGlobal = self[&quot;webpackChunk_N_E&quot;] = self[&quot;webpackChunk_N_E&quot;] || [];
+/******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
+/******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/nonce */
+/******/ 	(() =&gt; {
+/******/ 		__webpack_require__.nc = undefined;
+/******/ 	})();
+/******/ 	
+/************************************************************************/
+/******/ 	
+/******/ 	// module cache are used so entry inlining is disabled
+/******/ 	
+/******/ })()
+;</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Parameter</th>
+		<td><pre><code>Header User-Agent</code></pre></td>
+	</tr>
+	<tr>
+		<th scope="row">Attack</th>
+		<td><pre><code>Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)</code></pre></td>
+	</tr>
+	
+	
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+							</ol>
+						</li>
+						
+					</ol>
+				</li>
+				
+				<li id="alerts--risk-0-confidence-1">
+					<h3>
+						<span>Risk</span>=<span
+							class="risk-level">Informational</span>, <span>Confidence</span>=<span
+							class="confidence-level">Low</span> <span>(1)</span>
+					</h3>
+					<ol>
+						
+						<li class="alerts--site-li">
+							<h4>
+								<span class="site">http://localhost:3001</span> <span>(1)</span>
+							</h4>
+							<ol>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-8">Information Disclosure - Suspicious Comments</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET http://localhost:3001/_next/static/chunks/pages/_error.js</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://owasp.org/Top10/A01_2021-Broken_Access_Control/">OWASP_2021_A01</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/01-Information_Gathering/05-Review_Webpage_Content_for_Information_Leakage">WSTG-v42-INFO-05</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A3_2017-Sensitive_Data_Exposure.html">OWASP_2017_A03</a></span> 
+				</li>
+				<li>
+					<span><a href="https://cwe.mitre.org/data/definitions/615.html">CWE-615</a></span> 
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>The response appears to contain suspicious comments which may help an attacker.</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Other info</th>
+		<td> 
+<p>The following pattern was used: \bFROM\b and was detected in likely comment: &quot;// https://github.com/sindresorhus/modern-normalize/blob/main/modern-normalize.css#L38-L52\n        fontFamily: &#39;system-ui,\&quot;Seg&quot;, see evidence field for the suspicious comment/snippet.</p>
+ </td>
+	</tr>
+	
+	
+	
+	
+	<tr>
+		<th scope="row">Evidence</th>
+		<td><pre><code>from</code></pre></td>
+	</tr>
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Remove all comments that return information that may help an attacker and fix any underlying problems they refer to.</p>
+ </td>
+	</tr>
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+							</ol>
+						</li>
+						
+					</ol>
+				</li>
+				  
+			</ol>
+		</section>
+
+		<section id="appendix" class="appendix">
+			<h2>Appendix</h2>
+
+			<section id="alert-types" class="alert-types">
+				<h3>Alert types</h3>
+				<p class="alert-types-intro">This section contains additional information on the types of alerts in the report.</p>
+				<ol>
+					<li
+						id="alert-type-0">
+						<h4>CSP: Failure to Define Directive with No Fallback</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10055/">CSP</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/693.html">693</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>15</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="https://www.w3.org/TR/CSP/">https://www.w3.org/TR/CSP/</a></li>
+										<li><a
+											href="https://caniuse.com/#search=content+security+policy">https://caniuse.com/#search=content+security+policy</a></li>
+										<li><a
+											href="https://content-security-policy.com/">https://content-security-policy.com/</a></li>
+										<li><a
+											href="https://github.com/HtmlUnit/htmlunit-csp">https://github.com/HtmlUnit/htmlunit-csp</a></li>
+										<li><a
+											href="https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources">https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-1">
+						<h4>Content Security Policy (CSP) Header Not Set</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10038/">Content Security Policy (CSP) Header Not Set</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/693.html">693</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>15</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy">https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy</a></li>
+										<li><a
+											href="https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html">https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html</a></li>
+										<li><a
+											href="https://www.w3.org/TR/CSP/">https://www.w3.org/TR/CSP/</a></li>
+										<li><a
+											href="https://w3c.github.io/webappsec-csp/">https://w3c.github.io/webappsec-csp/</a></li>
+										<li><a
+											href="https://web.dev/articles/csp">https://web.dev/articles/csp</a></li>
+										<li><a
+											href="https://caniuse.com/#feat=contentsecuritypolicy">https://caniuse.com/#feat=contentsecuritypolicy</a></li>
+										<li><a
+											href="https://content-security-policy.com/">https://content-security-policy.com/</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-2">
+						<h4>Missing Anti-clickjacking Header</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10020/">Anti-clickjacking Header</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/1021.html">1021</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>15</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-3">
+						<h4>Server Leaks Information via &quot;X-Powered-By&quot; HTTP Response Header Field(s)</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10037/">Server Leaks Information via &quot;X-Powered-By&quot; HTTP Response Header Field(s)</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/497.html">497</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>13</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/01-Information_Gathering/08-Fingerprint_Web_Application_Framework">https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/01-Information_Gathering/08-Fingerprint_Web_Application_Framework</a></li>
+										<li><a
+											href="https://www.troyhunt.com/2012/02/shhh-dont-let-your-response-headers.html">https://www.troyhunt.com/2012/02/shhh-dont-let-your-response-headers.html</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-4">
+						<h4>X-Content-Type-Options Header Missing</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10021/">X-Content-Type-Options Header Missing</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/693.html">693</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>15</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/compatibility/gg622941(v=vs.85)">https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/compatibility/gg622941(v=vs.85)</a></li>
+										<li><a
+											href="https://owasp.org/www-community/Security_Headers">https://owasp.org/www-community/Security_Headers</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-5">
+						<h4>Authentication Request Identified</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10111/">Authentication Request Identified</a>)
+									</span>   
+								</td>
+							</tr>
+							
+							
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="https://www.zaproxy.org/docs/desktop/addons/authentication-helper/auth-req-id/">https://www.zaproxy.org/docs/desktop/addons/authentication-helper/auth-req-id/</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-6">
+						<h4>Content-Type Header Missing</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10019/">Content-Type Header Missing</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/345.html">345</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>12</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/compatibility/gg622941(v=vs.85)">https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/compatibility/gg622941(v=vs.85)</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-7">
+						<h4>Information Disclosure - Sensitive Information in URL</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10024/">Information Disclosure - Sensitive Information in URL</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/598.html">598</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>13</td>
+							</tr>
+							
+						</table>
+					</li>
+					<li
+						id="alert-type-8">
+						<h4>Information Disclosure - Suspicious Comments</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10027/">Information Disclosure - Suspicious Comments</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/615.html">615</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>13</td>
+							</tr>
+							
+						</table>
+					</li>
+					<li
+						id="alert-type-9">
+						<h4>Modern Web Application</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10109/">Modern Web Application</a>)
+									</span>   
+								</td>
+							</tr>
+							
+							
+							
+						</table>
+					</li>
+					<li
+						id="alert-type-10">
+						<h4>User Agent Fuzzer</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by an active scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10104/">plugin ID: 10104</a>)
+									</span>   
+								</td>
+							</tr>
+							
+							
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="https://owasp.org/wstg">https://owasp.org/wstg</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+				</ol>
+			</section>
+		</section>
+		 
+	</main>
+</body>
+</html>
+
+
+
